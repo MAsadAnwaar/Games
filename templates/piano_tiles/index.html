@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' />
+	<title>NoWhiteSpace</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1.maxinum-scale=1,user-scalable=no'> 
+	<link rel='stylesheet' type='text/css' href="{% static 'piano_tiles/css/index.css' %}">
+</head>
+<body>
+
+    <canvas id='container' width='400' height='600'></canvas>
+    <div class='fail' style='display:none;'>
+        <p class='p title'>You lost!</p>
+        <p class='p score'>Your score:<span></span></p>
+        <p class='p btn tran'>Again</p>
+    </div>
+
+<script src="{% static 'piano_tiles/js/jquery.js' %}"></script>
+<script src="{% static 'piano_tiles/js/index.js' %}"></script>
+</body>
+</html>

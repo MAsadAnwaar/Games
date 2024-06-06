@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tris Bot</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'Tic_tac_toe/TicTacToe-AI/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>TicTacToe AI</h1>
+    <div id="board">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div id="status"></div>
+  </div>
+  <script src="{% static 'Tic_tac_toe/TicTacToe-AI/script.js' %}"></script>
+</body>
+</html>

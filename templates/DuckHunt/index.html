@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>DUCK HUNT By KRITIKA</title>
+    <!--  favion.ico-->
+<link rel="shortcut icon" href="{% static 'DuckHunt/images/sample.png' %}" type="image/x-icon"/>
+<link rel="stylesheet" type="text/css" href="{% static 'DuckHunt/style.css' %}"/>
+<script src="{% static 'DuckHunt/build/libs.min.js' %}"></script>
+<script src="{% static 'DuckHunt/build/duckhunt.min.js' %}"></script>
+<script src="{% static 'DuckHunt/main.js' %}"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header" class="header"><h1> <span class="hhh">DUCK HUNT</span> <br/><small>Now with a with level creator!</small></h1></div>
+<div class="topMenu">
+<div id="mute" class="mute">Mute <i class="fas fa-volume-mute" style='font-size:24px'></i></div>
+<!-- <a href="{% static 'DuckHunt/template.html' %}"><div id="inst" class="inst"  >Instructions  <i class="fas fa-volume-mute" style='font-size:24px'></i></div> -->
+</a>
+<div id="gameField" class="gameField">
+
+
+<div id="game" class="game">
+    <div id="theFlash" class="theFlash"></div>
+    <div id="tree" class="tree"></div>
+    <div id="grass" class="grass"></div>
+</div>
+<div class="gameinfo ammo" id="ammo"></div>
+<div class="gameinfo waves" id="waves"></div>
+<div class="gameinfo duckBoard" id="duckBoard"></div>
+<div class="gameinfo scoreboard" id="scoreboard"></div>
+
+<div id="loser" class="messages loser">
+You Lost!
+<br/><br/>
+<div class="tryAgain">Try Again</div>
+</div>
+
+
+<div id="winner" class="messages winner">
+Winner Winner Chicken Dinner!  
+</div>
+
+
+<div id="level" class="messages level">
+Level 1
+</div>
+
+</div>
+
+<div id="levelCreate" class="levelCreator"><br/>
+<strong>Level Creator - Customize your levels: </strong><br/>
+
+<br> Starting Ducks: <input name="LCducks" class="jj" id="LCducks" size="5" type="text" value="2"/> &nbsp; &nbsp;
+
+
+<br>Starting Bullets: <input type="text" name="LCbullets" class="jj" id="LCbullets" size="5" value="4"/> &nbsp; &nbsp; 
+<br> Waves: <input id="LCwaves" name="LCwaves" size="5" class="jj" type="text" value="1"/> &nbsp; &nbsp;
+<br>Wave Time (sec): <input type="text" name="LCwavetime" class="jj" id="LCwavetime" size="5" value="10"/> &nbsp; &nbsp;
+<br> Difficulty: <input type="text" name="LCdif" id="LCdif" class="jj" size="5" value="5"/>
+ <br>
+ <br>
+ <br>
+
+<div id="doit" class="doit">Lets Start The Game</div>
+
+<div id="info"></div>
+
+<audio class="sounds" id="gunSound" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/gunSound.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/gunSound.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="gunSound2" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/gunSound2.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/gunSound2.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="laugh" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/laugh.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/laugh.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="quak" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/quak.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/quak.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="thud" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/thud.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/thud.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="ohyeah" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/ohYeah.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/ohYeah.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="quacking" loop="loop">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/quacking.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/quacking.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="sniff" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/sniff.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/sniff.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="bark" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/barkDucks.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/barkDucks.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="victory" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/champ.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/champ.mp3' %}"/>
+</audio>
+
+<audio class="sounds" id="defeat" preload="auto">
+    <source type="audio/ogg" src="{% static 'DuckHunt/sounds/loserSound.ogg' %}"/>
+    <source type="audio/mp3" src="{% static 'DuckHunt/sounds/loserSound.mp3' %}"/>
+</audio>
+<!-- <div class="foott">
+    <p>Made By- Muhammad Asad Anwaar 
+    </p>
+</div> -->
+</body>
+</html>

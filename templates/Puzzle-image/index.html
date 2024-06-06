@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="{% static 'Puzzle-image/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'Puzzle-image/css/jquery-ui.css' %}" />
+    <script src="{% static 'Puzzle-image/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'Puzzle-image/js/jquery-ui.js' %}"></script>
+  </head>
+  <style></style>
+  <body>
+    <div id="header">
+      <h1>My Puzzle Game</h1>
+      <h3>Create By Muhammad Asad Anwaar</h3>
+      <input type="file" id="inpfile" />
+      <button id="start">START GAME</button>
+    </div>
+    <h1 id="win"></h1>
+    <div id="main">
+      <div id="puzzle-cont"></div>
+      <div id="puzzle-pre"></div>
+    </div>
+    <h1 id="wintime"></h1>
+  </body>
+</html>
+
+<script src="{% static 'Puzzle-image/js/main.js' %}"></script>
