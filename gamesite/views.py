@@ -91,3 +91,21 @@ def The_Cube(request):
 def bubble_shooter(request):
     
     return render(request, 'bubble_shooter/index.html')
+
+
+def flipcard_memory_game(request):
+    
+    return render(request, 'FlipCard/flipcard_memory_game/index.html')
+
+def FLIP_CARD_MEMORY_GAME(request):
+    
+    return render(request, 'FlipCard/FLIP_CARD_MEMORY_GAME/index.html')
+
+def Memory_FlipCard_Game(request):
+    
+    return render(request, 'FlipCard/Memory_FlipCard_Game/index.html')
+
+
+def picflip(request):
+    
+    return render(request, 'FlipCard/picflip/index.html')

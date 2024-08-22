@@ -22,4 +22,9 @@ urlpatterns = [
     path("rabit", views.rabit, name='rabit'),
     path("tower_blocks", views.tower_blocks, name='tower_blocks'),
     path("The_Cube", views.The_Cube, name='The_Cube'),
+    path("flipcard_memory_game", views.flipcard_memory_game, name='flipcard_memory_game'),
+    path("FLIP_CARD_MEMORY_GAME", views.FLIP_CARD_MEMORY_GAME, name='FLIP_CARD_MEMORY_GAME'),
+    path("Memory_FlipCard_Game", views.Memory_FlipCard_Game, name='Memory_FlipCard_Game'),
+    path("picflip", views.picflip, name='picflip'),
+    
 ]
