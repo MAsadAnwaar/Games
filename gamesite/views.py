@@ -109,3 +109,34 @@ def Memory_FlipCard_Game(request):
 def picflip(request):
     
     return render(request, 'FlipCard/picflip/index.html')
+
+def animal_memory(request):
+    
+    return render(request, 'FlipCardNew/animal_memory/index.html')
+
+def fend_project_memory_game(request):
+    
+    return render(request, 'FlipCardNew/fend_project_memory_game/index.html')
+def Flip_and_Find(request):
+    
+    return render(request, 'FlipCardNew/Flip_and_Find/index.html')
+
+def hs_memorygame(request):
+    
+    return render(request, 'FlipCardNew/hs_memorygame/index.html')
+
+def memory___game(request):
+    
+    return render(request, 'FlipCardNew/memory___game/index.html')
+def Memory__games(request):
+    
+    return render(request, 'FlipCardNew/Memory__games/index.html')
+def memory_game(request):
+    
+    return render(request, 'FlipCardNew/memory_game/index.html')
+def Memory_Game_2(request):
+    
+    return render(request, 'FlipCardNew/Memory_Game_2/index.html')
+def memory_game_3(request):
+    
+    return render(request, 'FlipCardNew/memory_game_3/index.html')

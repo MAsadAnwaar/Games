@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="{% static 'FlipCardNew/Memory_Game_2/index.css' %}">
+    <link rel="shortcut icon" href="R.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex;">
+            <img src="{% static 'FlipCardNew/Memory_Game_2/R.png' %}" alt="" height="50px" width="100px">
+            <h2>Memory Game</h2>
+        </div>
+        
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload();">Reset Game</button>
+    </div>
+    <div class="popup">
+        <h2>🎉Congratulations🎉<br><br><span>You Won 🎁</span></h2>
+        <b class="close">X</b>
+    </div>
+    <canvas id="my-canvas"></canvas>
+    <script src="{% static 'FlipCardNew/Memory_Game_2/index.min.js' %}"></script>
+    <script src="{% static 'FlipCardNew/Memory_Game_2/index.js' %}"></script>
+</body>
+</html>

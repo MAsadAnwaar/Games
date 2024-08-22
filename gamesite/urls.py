@@ -26,5 +26,14 @@ urlpatterns = [
     path("FLIP_CARD_MEMORY_GAME", views.FLIP_CARD_MEMORY_GAME, name='FLIP_CARD_MEMORY_GAME'),
     path("Memory_FlipCard_Game", views.Memory_FlipCard_Game, name='Memory_FlipCard_Game'),
     path("picflip", views.picflip, name='picflip'),
+    path("animal_memory", views.animal_memory, name='animal_memory'),
+    path("fend_project_memory_game", views.fend_project_memory_game, name='fend_project_memory_game'),
+    path("Flip_and_Find", views.Flip_and_Find, name='Flip_and_Find'),
+    path("hs_memorygame", views.hs_memorygame, name='hs_memorygame'),
+    path("memory___game", views.memory___game, name='memory___game'),
+    path("Memory__games", views.Memory__games, name='Memory__games'),
+    path("memory_game", views.memory_game, name='memory_game'),
+    path("Memory_Game_2", views.Memory_Game_2, name='Memory_Game_2'),
+    path("memory_game_3", views.memory_game_3, name='memory_game_3'),
     
 ]
