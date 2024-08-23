@@ -1,0 +1,98 @@
+/*--Button Area Start--*/
+/*--Button Area Start--*/
+.cmn--btn {
+	padding: 10px 30px 12px;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 600;
+	display: inline-block;
+	color:var(--white-color) !important;
+	text-transform: capitalize;
+	font-family: 'Jost', sans-serif;
+	transition: all 0.3s;
+	text-align: center;
+	background: var(--button-color);
+	position: relative;
+	overflow: hidden;
+	transform: skewX(-20deg);
+	z-index: 1;
+	&::before{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		background: linear-gradient(114.26deg, #50d057 13.41%, #0c7224 87.24%);
+		height: 100%;
+		width: 0px;
+		transition:all 0.4s;
+	}
+	&:hover::before{
+		width: 100%;
+	}
+	&:hover{
+		color: var(--theme-color) !important;
+	}
+	&:hover{
+		span{
+			color: var(--white-color);
+		}
+	}
+	span{
+		z-index: 1;
+		position: relative;
+		transition: all 0.4s;
+		transform: skewX(20deg);
+		display: block;
+	}
+}
+.cmn--btn2 {
+	padding: 10px 30px 12px;
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 500;
+	display: inline-block;
+	color:var(--white-color) !important;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	font-family: 'Jost', sans-serif;
+	text-align: center;
+	background-color: #272833;;
+	position: relative;
+	overflow: hidden;
+	transform: skewX(-20deg);
+	&::before{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		background: linear-gradient(114.26deg, #151514 13.41%, #3d3c3a 87.24%);
+		height: 100%;
+		width: 0px;
+		transition:all 0.4s;
+	}
+	&:hover::before{
+		width: 100%;
+	}
+	&:hover{
+		span{
+			color: var(--white-color);
+		}
+	}
+	span{
+		display: block;
+		z-index: 1;
+		position: relative;
+		transition: all 0.4s;
+		transform: skewX(20deg);
+	}
+}
+.mneu-btn-grp{
+	@include flex;
+	gap: 13px;
+}
+.cmn__custom{
+	background: #C0A315;
+}
+/*--Button Area End--*/
+/*--Button Area End--*/

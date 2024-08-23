@@ -35,7 +35,7 @@ def need_for(request):
 
 def WebApps(request):
     
-    return render(request, 'WebApps/index.html')
+    return render(request, 'index.html')
 
 def Taptap(request):
     

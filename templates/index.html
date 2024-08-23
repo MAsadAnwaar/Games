@@ -1,0 +1,3007 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamnbino Bets HTML Template</title>
+    <!--Shortcut Icon-->
+    <link rel="icon" href="{% static 'assets/img/logo/favicon.png' %}" />
+    <!--Bootstrap Min Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+    <!--Macnific Popup Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}" />
+    <!--Owl Carousel min Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+    <!--Owl theme Default Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.css' %}" />
+    <!--nice select Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}" />
+    <!--animation Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" />
+    <!--Fontawsome all min Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" />
+    <!--Main custom Css-->
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+  </head>
+  <body>
+    <!--Mian Body Area Start-->
+    <div class="main__body__wrap">
+      <div class="right__body__wrap">
+        <!--Header Here-->
+        {% comment %} <header class="header-section">
+          <div class="container-fluid p-0">
+            <div class="header-wrapper">
+              <div class="menu__left__wrap">
+                <div class="logo-menu">
+                  <a href="index.html" class="logo">
+                    <img src="{% static 'assets/img/logo/logo.png' %}" alt="logo" />
+                  </a>
+                </div>
+                <div class="lang d-flex align-items-center">
+                  <div class="language__wrap">
+                    <div class="flag">
+                      <img src="{% static 'assets/img/header/uk.png' %}" alt="flag" />
+                    </div>
+                    <select name="flag" id="flag-img1">
+                      <option value="1">En</option>
+                      <option value="1">Cy</option>
+                      <option value="1">Et</option>
+                    </select>
+                  </div>
+                  <div class="header-bar d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+                <ul class="main-menu">
+                  <li>
+                    <a href="#home">
+                      <span>Homes</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#game">
+                      <span>Games</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#tour">
+                      <span>Tournament</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#reward">
+                      <span>Rewards</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#bonus">
+                      <span>Recent Winners</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="search__form">
+                      <form action="#0">
+                        <span class="icon">
+                          <img src="{% static 'assets/img/header/search.png' %}" alt="img" />
+                        </span>
+                        <input type="text" placeholder="Search........" />
+                      </form>
+                    </div>
+                  </li>
+                  <li class="cmn-grp">
+                    <span
+                      class="cmn--btn cmn__custom"
+                      data-bs-toggle="modal"
+                      data-bs-target="#register"
+                    >
+                      <span class="rela">Sign In</span>
+                    </span>
+                    <span
+                      class="cmn--btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#login"
+                    >
+                      <span class="rela">Sign Up</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mneu-btn-grp">
+                <div class="language__wrap">
+                  <div class="flag">
+                    <img src="{% static 'assets/img/header/uk.png' %}" alt="flag" />
+                  </div>
+                  <select name="flag" id="flag-img2">
+                    <option value="1">En</option>
+                    <option value="1">Cy</option>
+                    <option value="1">Et</option>
+                  </select>
+                </div>
+                <a href="#0" class="download">
+                  <img
+                    src="{% static 'assets/img/header/download.svg"
+                    alt="download-icon"
+                  />
+                </a>
+                <a
+                  href="#0"
+                  class="cmn--menu"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login"
+                >
+                  <span class="rela">Sign In</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header> {% endcomment %}
+        <!--Header End-->
+
+        <!--Banner Here-->
+        <section class="banner__section" id="home">
+          <div class="container-fluid">
+            <div class="banner__left__wrap owl-theme owl-carousel">
+              <div class="banner__left__items">
+                <div class="banner__content">
+                  <h1>It's Never Been Easier To Score</h1>
+                  <p>Join the fun with Pragmatic Play and Gamnbino</p>
+                </div>
+                {% comment %} <div class="banner__btn">
+                  <a
+                    href="#0"
+                    class="cmn--btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#critter"
+                  >
+                    <span>Join Now</span>
+                  </a>
+                </div> {% endcomment %}
+              </div>
+              <div class="banner__left__items banner__items__two">
+                <div class="banner__content">
+                  <h1>It's Never Been Easier To Score</h1>
+                  <p>Join the fun with Pragmatic Play and Gamnbino</p>
+                </div>
+                {% comment %} <div class="banner__btn">
+                  <a
+                    href="#0"
+                    class="cmn--btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#critter"
+                  >
+                    <span>Join Now</span>
+                  </a>
+                </div> {% endcomment %}
+              </div>
+              <div class="banner__left__items banner__items__three">
+                <div class="banner__content">
+                  <h1>It's Never Been Easier To Score</h1>
+                  <p>Join the fun with Pragmatic Play and Gamnbino</p>
+                </div>
+                {% comment %} <div class="banner__btn">
+                  <a
+                    href="#0"
+                    class="cmn--btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#critter"
+                  >
+                    <span>Join Now</span>
+                  </a>
+                </div> {% endcomment %}
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Banner End-->
+
+        <!--Devided Section Start-->
+        <div class="devided__wrap pt-60">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-xl-8">
+                <div class="allgame__left__wrap">
+                  <div class="new__games pb-60" id="game">
+                    <div class="section__header__top">
+                      <h4>New</h4>
+                      {% comment %} <ul
+                        class="nav nav-tabs"
+                        id="myTabbonustwo"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="day-new"
+                            data-bs-toggle="tab"
+                            data-bs-target="#dayonenew"
+                            type="button"
+                            role="tab"
+                            aria-controls="dayonenew"
+                            aria-selected="true"
+                          >
+                            <span>Live Casino</span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="week-new"
+                            data-bs-toggle="tab"
+                            data-bs-target="#weekonenew"
+                            type="button"
+                            role="tab"
+                            aria-controls="weekonenew"
+                            aria-selected="false"
+                          >
+                            <span> Instant Games </span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="month-new"
+                            data-bs-toggle="tab"
+                            data-bs-target="#monthonenew"
+                            type="button"
+                            role="tab"
+                            aria-controls="monthonenew"
+                            aria-selected="false"
+                          >
+                            <span> Popular </span>
+                          </button>
+                        </li>
+                      </ul> {% endcomment %}
+                    </div>
+                    <div class="tab-content" id="myTabContentfour">
+                      <div
+                        class="tab-pane fade show active"
+                        id="dayonenew"
+                        role="tabpanel"
+                      >
+                        <div class="row g-4">
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="hs_memorygame" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static '/WebApps/icons/hs_memorygame.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="hs_memorygame" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n10.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n11.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n12.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n13.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n14.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n15.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n16.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="weekonenew"
+                        role="tabpanel"
+                      >
+                        <div class="row g-4">
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n17.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n18.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n19.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n20.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n21.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n22.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n23.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn badge__bg">
+                                  <span>Live</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n24.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="monthonenew"
+                        role="tabpanel"
+                      >
+                        <div class="row g-4">
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n1.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n2.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n3.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n4.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n5.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n6.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n7.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="new__game__items">
+                              <div class="badge__btn">
+                                <a href="#0" class="cmn--btn">
+                                  <span>New</span>
+                                </a>
+                                <a href="#0" class="cmn--btn bg__ornge">
+                                  <span>Rm</span>
+                                </a>
+                              </div>
+                              <img
+                                src="{% static 'assets/img/new-games/n8.png' %}"
+                                alt="img"
+                              />
+                              <div class="game__overlay">
+                                <div class="btn__grp">
+                                  <a href="#0" class="cmn--btn">
+                                    <span>Play</span>
+                                  </a>
+                                  <a
+                                    href="#0"
+                                    class="cmn--btn2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#critter"
+                                  >
+                                    <span>Demo</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% comment %} <div class="tournaments__master pb-60" id="tour">
+                    <div class="section__header__top">
+                      <h4>Tournament</h4>
+                      <a href="#0" class="cmn--btn">
+                        <span> See All </span>
+                      </a>
+                    </div>
+                    <div class="tournaments__wrap owl-theme owl-carousel">
+                      <div class="tournaments__items">
+                        <div class="tournaments__shape">
+                          <img
+                            src="{% static 'assets/img/tournamtest/tbg1.png' %}"
+                            alt="img"
+                          />
+                        </div>
+                        <div class="content">
+                          <h3>The Masters</h3>
+                          <p>Sport tournament prize pool:</p>
+                          <h5>€1,500</h5>
+                          <div class="dollar">
+                            <span
+                              ><img
+                                src="{% static 'assets/img/tournamtest/dollar.png' %}"
+                                alt="img"
+                            /></span>
+                            <span>Min bet: €10</span>
+                          </div>
+                          <a
+                            href="#0"
+                            class="cmn--btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#critter"
+                          >
+                            <span>PlayNow</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tournaments__items">
+                        <div class="tournaments__shape">
+                          <img
+                            src="{% static 'assets/img/tournamtest/tbg1.png' %}"
+                            alt="img"
+                          />
+                        </div>
+                        <div class="content">
+                          <h3>The Masters</h3>
+                          <p>Sport tournament prize pool:</p>
+                          <h5>€1,500</h5>
+                          <div class="dollar">
+                            <span
+                              ><img
+                                src="{% static 'assets/img/tournamtest/dollar.png' %}"
+                                alt="img"
+                            /></span>
+                            <span>Min bet: €10</span>
+                          </div>
+                          <a
+                            href="#0"
+                            class="cmn--btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#critter"
+                          >
+                            <span>PlayNow</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="tournaments__items">
+                        <div class="tournaments__shape">
+                          <img
+                            src="{% static 'assets/img/tournamtest/tbg1.png' %}"
+                            alt="img"
+                          />
+                        </div>
+                        <div class="content">
+                          <h3>The Masters</h3>
+                          <p>Sport tournament prize pool:</p>
+                          <h5>€1,500</h5>
+                          <div class="dollar">
+                            <span
+                              ><img
+                                src="{% static 'assets/img/tournamtest/dollar.png' %}"
+                                alt="img"
+                            /></span>
+                            <span>Min bet: €10</span>
+                          </div>
+                          <a
+                            href="#0"
+                            class="cmn--btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#critter"
+                          >
+                            <span>PlayNow</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> {% endcomment %}
+                  {% comment %} <div class="daily__bonus pb-60" id="reward">
+                    <div class="section__header__top">
+                      <h4>Daily Bonuses</h4>
+                      <ul class="nav nav-tabs" id="myTabbonus" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="day-bonus"
+                            data-bs-toggle="tab"
+                            data-bs-target="#dayone"
+                            type="button"
+                            role="tab"
+                            aria-controls="dayone"
+                            aria-selected="true"
+                          >
+                            <span>Day</span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="week-bonus"
+                            data-bs-toggle="tab"
+                            data-bs-target="#weekone"
+                            type="button"
+                            role="tab"
+                            aria-controls="weekone"
+                            aria-selected="false"
+                          >
+                            <span> Week </span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="month-bonus"
+                            data-bs-toggle="tab"
+                            data-bs-target="#monthone"
+                            type="button"
+                            role="tab"
+                            aria-controls="monthone"
+                            aria-selected="false"
+                          >
+                            <span> Month </span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="all-bonus"
+                            data-bs-toggle="tab"
+                            data-bs-target="#allone"
+                            type="button"
+                            role="tab"
+                            aria-controls="allone"
+                            aria-selected="false"
+                          >
+                            <span> All </span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-content" id="myTabContenttwo">
+                      <div
+                        class="tab-pane fade show active"
+                        id="dayone"
+                        role="tabpanel"
+                      >
+                        <div class="daily__bonus__slide owl-theme owl-carousel">
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus3.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> rolocoster </span>
+                              <h6>$4,006.25</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div> {% endcomment %}
+                      <div class="tab-pane fade" id="weekone" role="tabpanel">
+                        <div class="daily__bonus__slide owl-theme owl-carousel">
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus3.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> rolocoster </span>
+                              <h6>$4,006.25</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="monthone" role="tabpanel">
+                        <div class="daily__bonus__slide owl-theme owl-carousel">
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus3.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> rolocoster </span>
+                              <h6>$4,006.25</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="allone" role="tabpanel">
+                        <div class="daily__bonus__slide owl-theme owl-carousel">
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus3.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> rolocoster </span>
+                              <h6>$4,006.25</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus1.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Aji9 </span>
+                              <h6>$1,11213</h6>
+                            </div>
+                          </div>
+                          <div class="daily__bonus__items">
+                            <div class="thumb">
+                              <img
+                                src="{% static 'assets/img/tournamtest/bonus2.png' %}"
+                                alt="img"
+                              />
+                            </div>
+                            <div class="content">
+                              <span> Hidden </span>
+                              <h6>$6,512.24</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% comment %} <div class="wins__table" id="bonus">
+                    <div
+                      class="wins__head wow fadeInDown"
+                      data-wow-delay="0.2s"
+                    >
+                      <h3>Wins</h3>
+                    </div>
+                    <div class="wins__wrap">
+                      <ul class="nav nav-tabs" id="myTabjack" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="home-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#homeone"
+                            type="button"
+                            role="tab"
+                            aria-controls="homeone"
+                            aria-selected="true"
+                          >
+                            <span>Current winners</span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="profile-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#profileone"
+                            type="button"
+                            role="tab"
+                            aria-controls="profileone"
+                            aria-selected="false"
+                          >
+                            <span>Best odds (24 h)</span>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="contact-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#contactone"
+                            type="button"
+                            role="tab"
+                            aria-controls="contactone"
+                            aria-selected="false"
+                          >
+                            <span>Top winners (24 h)</span>
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContentthree">
+                        <div
+                          class="tab-pane fade show active"
+                          id="homeone"
+                          role="tabpanel"
+                        >
+                          <div class="wins__table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th>Game</th>
+                                  <th>Player</th>
+                                  <th>Bet</th>
+                                  <th>Odds</th>
+                                  <th>Winnings</th>
+                                  <th>Time</th>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t1.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>O**a</td>
+                                  <td>49 $</td>
+                                  <td>x153.60</td>
+                                  <td>122$</td>
+                                  <td>10:44</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t2.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Starsn’ Sweets </span>
+                                  </td>
+                                  <td>rt**a</td>
+                                  <td>0.17 $</td>
+                                  <td>x2.08</td>
+                                  <td>65 $</td>
+                                  <td>10:43</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t3.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Hoe Shots </span>
+                                  </td>
+                                  <td>ju**87</td>
+                                  <td>51 $</td>
+                                  <td>x2.00</td>
+                                  <td>95 $</td>
+                                  <td>10:42</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t4.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>48***ov</td>
+                                  <td>125 $</td>
+                                  <td>x2.00</td>
+                                  <td>26 $</td>
+                                  <td>10:42</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t5.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Cleo’s Book </span>
+                                  </td>
+                                  <td>S**am</td>
+                                  <td>51 $</td>
+                                  <td>x105.50</td>
+                                  <td>107 $</td>
+                                  <td>10:41</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t6.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Starsn’ Sweets </span>
+                                  </td>
+                                  <td>2****2000</td>
+                                  <td>50 $</td>
+                                  <td>x2.08</td>
+                                  <td>x240.00</td>
+                                  <td>10:40</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t3.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>t****-80</td>
+                                  <td>0.16 $</td>
+                                  <td>x118.35</td>
+                                  <td>38 $</td>
+                                  <td>10:39</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="profileone"
+                          role="tabpanel"
+                        >
+                          <div class="wins__table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th>Game</th>
+                                  <th>Player</th>
+                                  <th>Bet</th>
+                                  <th>Odds</th>
+                                  <th>Winnings</th>
+                                  <th>Time</th>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t1.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>O**a</td>
+                                  <td>49 $</td>
+                                  <td>x153.60</td>
+                                  <td>122$</td>
+                                  <td>10:44</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t2.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Starsn’ Sweets </span>
+                                  </td>
+                                  <td>rt**a</td>
+                                  <td>0.17 $</td>
+                                  <td>x2.08</td>
+                                  <td>65 $</td>
+                                  <td>10:43</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t3.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Hoe Shots </span>
+                                  </td>
+                                  <td>ju**87</td>
+                                  <td>51 $</td>
+                                  <td>x2.00</td>
+                                  <td>95 $</td>
+                                  <td>10:42</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t4.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>48***ov</td>
+                                  <td>125 $</td>
+                                  <td>x2.00</td>
+                                  <td>26 $</td>
+                                  <td>10:42</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="contactone"
+                          role="tabpanel"
+                        >
+                          <div class="wins__table">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th>Game</th>
+                                  <th>Player</th>
+                                  <th>Bet</th>
+                                  <th>Odds</th>
+                                  <th>Winnings</th>
+                                  <th>Time</th>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t1.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>O**a</td>
+                                  <td>49 $</td>
+                                  <td>x153.60</td>
+                                  <td>122$</td>
+                                  <td>10:44</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t2.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Starsn’ Sweets </span>
+                                  </td>
+                                  <td>rt**a</td>
+                                  <td>0.17 $</td>
+                                  <td>x2.08</td>
+                                  <td>65 $</td>
+                                  <td>10:43</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t3.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Hoe Shots </span>
+                                  </td>
+                                  <td>ju**87</td>
+                                  <td>51 $</td>
+                                  <td>x2.00</td>
+                                  <td>95 $</td>
+                                  <td>10:42</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t4.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Fat Drac </span>
+                                  </td>
+                                  <td>48***ov</td>
+                                  <td>125 $</td>
+                                  <td>x2.00</td>
+                                  <td>26 $</td>
+                                  <td>10:42</td>
+                                </tr>
+                                <tr class="tb1">
+                                  <td class="tdfirst">
+                                    <div class="icon">
+                                      <img
+                                        src="{% static 'assets/img/wins/t5.png' %}"
+                                        alt="t-img"
+                                      />
+                                    </div>
+                                    <span> Cleo’s Book </span>
+                                  </td>
+                                  <td>S**am</td>
+                                  <td>51 $</td>
+                                  <td>x105.50</td>
+                                  <td>107 $</td>
+                                  <td>10:41</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> {% endcomment %}
+              {% comment %} <div class="col-xl-4 col-lg-12">
+                <div class="jackpot__right__wrapper">
+                  <div class="jack__count__head">
+                    <h6>Jackpot</h6>
+                    <h2>
+                      <span class="counter" data-count="25871785">0</span>
+                      <span> $</span>
+                    </h2>
+                  </div>
+                  <ul class="count__features">
+                    <li>Providers</li>
+                    <li>Features</li>
+                    <li>Genres</li>
+                  </ul>
+                  <div class="counter__list__body">
+                    <div class="search__area">
+                      <input type="text" placeholder="Search..." />
+                      <div class="icon">
+                        <img src="{% static 'assets/img/new-games/search.png' %}" alt="img" />
+                      </div>
+                    </div>
+                    <div class="list__wrap">
+                      <ul class="list__left">
+                        <li>NetEnt</li>
+                        <li>Amusnet Interactive</li>
+                        <li>NetEnt</li>
+                        <li>Pragmatic Play</li>
+                        <li>Amatic</li>
+                        <li>NetEnt</li>
+                        <li>Pragmatic Play</li>
+                        <li>Amatic</li>
+                        <li>Thunderkick</li>
+                      </ul>
+                      <ul class="list__left">
+                        <li>Play'n GO</li>
+                        <li>Novomatic</li>
+                        <li>Playson</li>
+                        <li>Yggdrasil</li>
+                        <li>Novomatic</li>
+                        <li>Playson</li>
+                        <li>Yggdrasil</li>
+                        <li>Games Global</li>
+                        <li>Endorphina</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#0" class="list__foot">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </a>
+                  <div class="jackpot__dimond__wrap">
+                    <div class="dimond__head">
+                      <div class="dimond__left">
+                        <div class="dimond">
+                          <img
+                            src="{% static 'assets/img/new-games/dimond.png' %}"
+                            alt="dimond"
+                          />
+                        </div>
+                        <h4>Jackpot</h4>
+                      </div>
+                      <a href="#0" class="cmn--btn">
+                        <span> <i class="fa-solid fa-angle-down"></i></span>
+                      </a>
+                    </div>
+                    <div class="dimond__list__body">
+                      <ul class="dimond__list__left">
+                        <li>
+                          <a href="#0" class="left__content">
+                            <span class="text-list"> Games Global </span>
+                            <span> 9 942 827 $ </span>
+                          </a>
+                          <a href="#0" class="right__icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="left__content">
+                            <span class="text-list"> Red Tiger </span>
+                            <span> 4 292 $ </span>
+                          </a>
+                          <a href="#0" class="right__icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="left__content">
+                            <span class="text-list"> Belatra </span>
+                            <span> 649 677 $ </span>
+                          </a>
+                          <a href="#0" class="right__icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                      <ul class="dimond__list__left">
+                        <li>
+                          <a href="#0" class="left__content">
+                            <span class="text-list"> Playtech </span>
+                            <span> 12 209 $ </span>
+                          </a>
+                          <a href="#0" class="right__icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="left__content">
+                            <span class="text-list"> iSoftBet </span>
+                            <span> 457 81 $ </span>
+                          </a>
+                          <a href="#0" class="right__icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="left__content">
+                            <span class="text-list"> Betsoft Gaming </span>
+                            <span> 1 97 804 $ </span>
+                          </a>
+                          <a href="#0" class="right__icon">
+                            <i class="fa-solid fa-angle-right"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div> {% endcomment %}
+                  {% comment %} <div class="spin__wrap owl-theme owl-carousel">
+                    <div class="spin__items">
+                      <a href="#0" class="cmn--btn2">
+                        <span> Spin Factor </span>
+                      </a>
+                      <a href="#0" class="cmn--btn dollar">
+                        <span> 1 800 $</span>
+                      </a>
+                      <img src="{% static 'assets/img/spin/spin1.png' %}" alt="spinimg" />
+                      <div class="timing__wrap">
+                        <span class="head"> Will start in </span>
+                        <div class="timing">
+                          <div class="time__items">
+                            <h6>351</h6>
+                            <span>Day</span>
+                          </div>
+                          <div class="time__items">
+                            <h6>24</h6>
+                            <span> Hours </span>
+                          </div>
+                          <div class="time__items">
+                            <h6>25</h6>
+                            <span> minutes </span>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#0" class="cmn--btn">
+                        <span>About</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Devided Section Start-->
+
+        <!--Footer Start-->
+        <footer class="footer__section pt-60">
+          <div class="container">
+            <div class="footer__top pb-60">
+              <div class="row g-5">
+                <div
+                  class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 wow fadeInUp"
+                  data-wow-delay="0.9s"
+                >
+                  <div class="widget__items">
+                    <div class="footer-head">
+                      <a href="#0" class="footer-logo">
+                        <img src="{% static 'assets/img/logo/logo.png' %}" alt="f-logo" />
+                      </a>
+                    </div>
+                    <div class="content-area">
+                      <p>
+                        Lorem ipsum dolor sit of the cart amet, consectetur
+                        adipiscing elit. I talk out of the moon.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-xxl-3 col-xl-2 col-lg-3 col-md-6 col-sm-6 wow fadeInUp"
+                  data-wow-delay="0.7s"
+                >
+                  <div class="widget__items">
+                    <div class="footer-head">
+                      <h5 class="title">Company</h5>
+                    </div>
+                    <div class="content-area">
+                      <ul class="quick-link">
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            Home
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            Games
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            Tournament
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            Rewards
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            Recent Winners
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-3 wow fadeInUp"
+                  data-wow-delay="0.5s"
+                >
+                  <div class="widget__items">
+                    <div class="footer-head">
+                      <h5 class="title">Support</h5>
+                    </div>
+                    <div class="content-area">
+                      <ul class="quick-link">
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            FAQs
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <img
+                              src="{% static 'assets/img/footer/rightarrow.png' %}"
+                              alt="angle"
+                            />
+                            Support
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-xxl-4 col-xl-5 col-lg-4 col-md-6 col-sm-9 wow fadeInUp"
+                  data-wow-delay="0.2s"
+                >
+                  <div class="widget__items">
+                    <div class="footer-head">
+                      <h5 class="title">Subscribe Our Newslatter</h5>
+                    </div>
+                    <div class="content-area">
+                      <form action="#0">
+                        <input
+                          type="text"
+                          placeholder="Enter Your Email address"
+                        />
+                        <button class="cmn--btn" type="submit">
+                          <span>Subscribe</span>
+                        </button>
+                      </form>
+                      <h6>Follow Us</h6>
+                      <ul class="social">
+                        <li>
+                          <a href="#0" class="icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="icon">
+                            <i class="fa-brands fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0" class="icon">
+                            <i class="fa-brands fa-twitter"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__bottom">
+              <p>
+                Copyright &copy; 2023,
+                <a href="#0" class="text--base">Gamnbino</a> - All Right
+                Reserved
+              </p>
+              <ul class="bottom__ling">
+                <li>
+                  <a href="#0"> Security </a>
+                </li>
+                <li>
+                  <a href="#0"> Terms </a>
+                </li>
+                <li>
+                  <a href="#0"> Privacy </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <!--Footer End-->
+      </div>
+    </div>
+    <!--Mian Body Area Start-->
+
+    <!--Register Modal Start-->
+    <div
+      class="modal register__modal fade"
+      id="register"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal__right">
+              <ul class="nav nav-tabs" id="myTabing" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="home-tabemail"
+                    data-bs-toggle="tab"
+                    data-bs-target="#homeemail"
+                    type="button"
+                    role="tab"
+                    aria-controls="homeemail"
+                    aria-selected="true"
+                  >
+                    Sign Up
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="contact-tabup"
+                    data-bs-toggle="tab"
+                    data-bs-target="#contactup"
+                    type="button"
+                    role="tab"
+                    aria-controls="contactup"
+                    aria-selected="false"
+                  >
+                    Sign In
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContentents">
+                <div class="tab-pane fade" id="homeemail" role="tabpanel">
+                  <div class="form__tabs__wrap">
+                    <div class="focus__icon">
+                      <h4>Create an Account</h4>
+                      <p>
+                        Already have an account?
+                        <a href="#0" class="text-base">Login</a>
+                      </p>
+                    </div>
+                    <form action="#0">
+                      <div class="form__grp">
+                        <label for="email33">Email Address</label>
+                        <input
+                          type="email"
+                          id="email33"
+                          placeholder="Registered Email Address."
+                        />
+                      </div>
+                      <div class="form__grp">
+                        <label for="password-field9">Login Password</label>
+                        <input
+                          id="password-field9"
+                          type="password"
+                          placeholder="Login Password"
+                        />
+                        <span
+                          id="#password-field9"
+                          class="fa fa-fw fa-eye field-icon toggle-password9"
+                        ></span>
+                      </div>
+                      <div class="form__grp">
+                        <label for="password-field3">Confirm Password</label>
+                        <input
+                          id="password-field3"
+                          type="password"
+                          placeholder="Confirm Password"
+                        />
+                        <span
+                          id="#password-field3"
+                          class="fa fa-fw fa-eye field-icon toggle-password3"
+                        ></span>
+                      </div>
+                      <div
+                        class="form-check form__check d-flex align-items-center"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="checkiss2"
+                        />
+                        <label class="form-check-label" for="checkiss2">
+                          I agree with <a href="#0"> user agreement,</a> and
+                          confirm that I am at least 18 years old!
+                        </label>
+                      </div>
+                      <div class="create__btn">
+                        <a href="#0" class="cmn--btn">
+                          <span>Create an accountn</span>
+                        </a>
+                      </div>
+                    </form>
+                    <div class="social__head">
+                      <div class="border__static"></div>
+                      <span> Or log in directly with </span>
+                      <ul class="social">
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-google"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-telegram"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade show active"
+                  id="contactup"
+                  role="tabpanel"
+                >
+                  <div class="form__tabs__wrap">
+                    <form action="#0">
+                      <div class="form__grp">
+                        <label for="emailg">Email Address</label>
+                        <input
+                          type="email"
+                          id="emailg"
+                          placeholder="Registered Email Address."
+                        />
+                      </div>
+                      <div class="login__signup">
+                        <a href="#0"> Forgot Your Password? </a>
+                      </div>
+                      <div class="form__grp">
+                        <label for="password-field7">Login Password</label>
+                        <input
+                          id="password-field7"
+                          type="password"
+                          placeholder="Login Password"
+                        />
+                        <span
+                          id="#password-field7"
+                          class="fa fa-fw fa-eye field-icon toggle-password7"
+                        ></span>
+                      </div>
+                      <div class="create__btn">
+                        <a href="#0" class="cmn--btn">
+                          <span>Login account</span>
+                        </a>
+                      </div>
+                      <div class="signup__text">
+                        <p>Don't have an account? <a href="#0">Sign Up</a></p>
+                      </div>
+                    </form>
+                    <div class="social__head">
+                      <div class="border__static"></div>
+                      <span> Or log in directly with </span>
+                      <ul class="social">
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-google"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-telegram"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Register Modal End-->
+
+    <!--Login Modal Start-->
+    <div
+      class="modal register__modal fade"
+      id="login"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal__right">
+              <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="home-tab1"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home2"
+                    type="button"
+                    role="tab"
+                    aria-controls="home"
+                    aria-selected="true"
+                  >
+                    Sign Up
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="contact-tab3"
+                    data-bs-toggle="tab"
+                    data-bs-target="#contact2"
+                    type="button"
+                    role="tab"
+                    aria-controls="contact2"
+                    aria-selected="false"
+                  >
+                    Sign In
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent2">
+                <div class="tab-pane fade" id="home2" role="tabpanel">
+                  <div class="form__tabs__wrap">
+                    <div class="focus__icon">
+                      <h4>Create an Account</h4>
+                      <p>
+                        Already have an account?
+                        <a href="#0" class="text-base">Login</a>
+                      </p>
+                    </div>
+                    <form action="#0">
+                      <div class="row g-4">
+                        <div class="col-lg-6">
+                          <div class="form__grp">
+                            <label for="fname">First Name</label>
+                            <input
+                              type="text"
+                              id="fname"
+                              placeholder="First Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form__grp">
+                            <label for="lname">Last Name</label>
+                            <input
+                              type="text"
+                              id="lname"
+                              placeholder="Last Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form__grp">
+                            <label for="email3">Your Email</label>
+                            <input
+                              type="email"
+                              id="email3"
+                              placeholder="Enter Email"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form__grp">
+                            <label for="phone">Phone Number</label>
+                            <input
+                              type="text"
+                              id="phone"
+                              placeholder="Enter Phone Number"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form__grp">
+                            <label for="password-field4">Password</label>
+                            <input
+                              id="password-field4"
+                              type="password"
+                              placeholder="Enter Password"
+                            />
+                            <span
+                              id="#password-field4"
+                              class="fa fa-fw fa-eye field-icon toggle-password4"
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form__grp">
+                            <label for="password-field6"
+                              >Confirm Password</label
+                            >
+                            <input
+                              id="password-field6"
+                              type="password"
+                              placeholder="Enter Confirm Password"
+                            />
+                            <span
+                              id="#password-field6"
+                              class="fa fa-fw fa-eye field-icon toggle-password6"
+                            ></span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6"></div>
+                        <div
+                          class="form-check form__check d-flex align-items-center"
+                        >
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="checkiss"
+                          />
+                          <label class="form-check-label" for="checkiss">
+                            I agree with
+                            <a href="#0" class="text-base"> user agreement,</a>
+                            and confirm that I am at least 18 years old!
+                          </label>
+                        </div>
+                      </div>
+                      <div class="create__btn">
+                        <a href="#0" class="cmn--btn">
+                          <span>Sign up</span>
+                        </a>
+                      </div>
+                    </form>
+                    <div class="social__head">
+                      <div class="border__static"></div>
+                      <span> OR </span>
+                      <ul class="social">
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade show active"
+                  id="contact2"
+                  role="tabpanel"
+                >
+                  <div class="form__tabs__wrap">
+                    <div class="focus__icon">
+                      <h4>Sign into your account</h4>
+                      <p>
+                        Don't have an account?
+                        <a href="#0" class="text-base">Sign up</a>
+                      </p>
+                    </div>
+                    <form action="#0">
+                      <div class="form__grp">
+                        <label for="email34">Email</label>
+                        <input
+                          type="email"
+                          id="email34"
+                          placeholder="Email Your"
+                        />
+                      </div>
+                      <div class="form__grp">
+                        <label for="toggle-password10">Password</label>
+                        <input
+                          id="toggle-password10"
+                          type="password"
+                          placeholder="Your Password"
+                        />
+                        <span
+                          id="#toggle-password10"
+                          class="fa fa-fw fa-eye field-icon toggle-password10"
+                        ></span>
+                      </div>
+                      <div class="login__signup">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="remem"
+                          />
+                          <label class="form-check-label" for="remem">
+                            Remember me
+                          </label>
+                        </div>
+                        <a href="#0"> Forgot Your Password? </a>
+                      </div>
+                      <div class="create__btn">
+                        <a href="#0" class="cmn--btn">
+                          <span>Log In</span>
+                        </a>
+                      </div>
+                    </form>
+                    <div class="social__head">
+                      <div class="border__static"></div>
+                      <span> OR </span>
+                      <ul class="social">
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#0">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> {% endcomment %}
+    <!--Login Modal End-->
+
+    <!--Login Modal Start-->
+    <div
+      class="modal critter__pop fade"
+      id="critter"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="t__shape">
+            <img src="{% static 'assets/img/modal/t-shape.png' %}" alt="shape" />
+          </div>
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="toffi__bg">
+              <div class="head__toffi">
+                <h1>The Masters</h1>
+                <p>sport tournament prize pool:</p>
+                <h2>€1,500</h2>
+              </div>
+              <div class="bottom__toffi">
+                <a
+                  href="#0"
+                  class="cmn--btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#critter"
+                >
+                  <span> PlayNow</span>
+                </a>
+                <div class="timing__wrap">
+                  <ul class="distance">
+                    <li>
+                      <span id="days"></span>
+                      <span class="spantext">Days</span>
+                    </li>
+                    <li>
+                      <span id="hours"></span>
+                      <span class="spantext">Hours</span>
+                    </li>
+                    <li>
+                      <span id="minutes"></span>
+                      <span class="spantext"> Minutes </span>
+                    </li>
+                    <li>
+                      <span id="seconds"></span>
+                      <span class="spantext">Seconds</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__table">
+          <div class="critter__head">
+            <div class="critter__content">
+              <div class="critter__right">
+                <h5>prize pool</h5>
+                <h4>€1,500</h4>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="{% static 'assets/img/modal/trofice.png' %}" alt="critter" />
+            </div>
+          </div>
+          <div class="wins__table">
+            <table>
+              <tbody>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Score</th>
+                  <th>Prize</th>
+                </tr>
+                <tr class="tb1">
+                  <td class="tdfirst">
+                    <div class="icon">
+                      <img src="{% static 'assets/img/modal/bd1.png' %}" alt="t-img" />
+                    </div>
+                  </td>
+                  <td>Wilson</td>
+                  <td>12458</td>
+                  <td>€200</td>
+                </tr>
+                <tr class="tb1">
+                  <td class="tdfirst">
+                    <div class="icon">
+                      <img src="{% static 'assets/img/modal/bd2.png' %}" alt="t-img" />
+                    </div>
+                  </td>
+                  <td>Jaydon</td>
+                  <td>12565</td>
+                  <td>€300</td>
+                </tr>
+                <tr class="tb1">
+                  <td class="tdfirst">
+                    <div class="icon">
+                      <img src="{% static 'assets/img/modal/bd3.png' %}" alt="t-img" />
+                    </div>
+                  </td>
+                  <td>Zain</td>
+                  <td>12541</td>
+                  <td>€500</td>
+                </tr>
+                <tr class="tb1">
+                  <td class="tdfirst">
+                    <div class="icon">
+                      <img src="{% static 'assets/img/modal/bd4.png' %}" alt="t-img" />
+                    </div>
+                  </td>
+                  <td>Jakob</td>
+                  <td>12485</td>
+                  <td>€400</td>
+                </tr>
+                <tr class="tb1">
+                  <td class="tdfirst">
+                    <div class="icon">
+                      <img src="{% static 'assets/img/modal/bd5.png' %}" alt="t-img" />
+                    </div>
+                  </td>
+                  <td>Craig</td>
+                  <td>12210</td>
+                  <td>€100</td>
+                </tr>
+                <tr class="tb1">
+                  <td class="tdfirst">
+                    <div class="icon">
+                      <img src="{% static 'assets/img/modal/bd6.png' %}" alt="t-img" />
+                    </div>
+                  </td>
+                  <td>Alfonso</td>
+                  <td>12024</td>
+                  <td>€150</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="view__btn">
+          <a href="#0" class="cmn--btn">
+            <span>View More</span>
+          </a>
+        </div>
+        <div class="modal__thumb__wrap">
+          <div class="container">
+            <div class="section-header">
+              <h4>Games in this tournament</h4>
+            </div>
+            <div class="row g-3">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                    <a href="#0" class="cmn--btn bg__ornge">
+                      <span>Rm</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m1.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                    <a href="#0" class="cmn--btn bg__ornge">
+                      <span>Rm</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m2.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m3.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                    <a href="#0" class="cmn--btn bg__ornge">
+                      <span>Rm</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m4.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                    <a href="#0" class="cmn--btn bg__ornge">
+                      <span>Rm</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m5.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                    <a href="#0" class="cmn--btn bg__ornge">
+                      <span>Rm</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m6.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m7.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div class="new__game__items">
+                  <div class="badge__btn">
+                    <a href="#0" class="cmn--btn">
+                      <span>New</span>
+                    </a>
+                    <a href="#0" class="cmn--btn bg__ornge">
+                      <span>Rm</span>
+                    </a>
+                  </div>
+                  <img src="{% static 'assets/img/modal/m8.png' %}" alt="img" />
+                  <div class="game__overlay">
+                    <div class="btn__grp">
+                      <a href="#0" class="cmn--btn">
+                        <span>Play</span>
+                      </a>
+                      <a
+                        href="#0"
+                        class="cmn--btn2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#critter"
+                      >
+                        <span>Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Login Modal End-->
+
+    <!--Jquery min js-->
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <!--Bootstrap bundle min js-->
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <!--Magnific Popup js-->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!--Owl Carousel min js-->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!--nice select min js-->
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <!--Wow min js-->
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <!--Main js-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script>
+      const second = 1000; /* milliseconds in a second */
+      const minute = second * 60; /* and in one minute */
+      const hour = minute * 60; /* and in one hour */
+      const day = hour * 24; /* and in one day */
+
+      /* Year of reference : year+1, January, 1 (00:00:00 by default) */
+      const countdownDate = new Date(new Date().getFullYear() + 1, 0, 1);
+      /* for this year, returns the number of milliseconds since January 1, 1970 00:00:00 */
+      const countdownTime = countdownDate.getTime();
+
+      /* Refresh the function each 1000ms = 1s */
+      setInterval(function () {
+        /* Difference between the year of reference and this moment */
+        const distance = countdownTime - new Date().getTime();
+
+        document.getElementById("days").innerText = Math.floor(distance / day);
+        document.getElementById("hours").innerText = Math.floor(
+          (distance % day) / hour
+        );
+        document.getElementById("minutes").innerText = Math.floor(
+          (distance % hour) / minute
+        );
+        document.getElementById("seconds").innerText = Math.floor(
+          (distance % minute) / second
+        );
+      }, 1000);
+    </script>
+    <script>
+      $(document).ready(function ($) {
+        //Check if an element was in a screen
+        function isScrolledIntoView(elem) {
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+          var elemTop = $(elem).offset().top;
+          var elemBottom = elemTop + $(elem).height();
+          return elemBottom <= docViewBottom;
+        }
+        //Count up code
+        function countUp() {
+          $(".counter").each(function () {
+            var $this = $(this), // <- Don't touch this variable. It's pure magic.
+              countTo = $this.attr("data-count");
+            ended = $this.attr("ended");
+
+            if (ended != "true" && isScrolledIntoView($this)) {
+              $({ countNum: $this.text() }).animate(
+                {
+                  countNum: countTo,
+                },
+                {
+                  duration: 2500, //duration of counting
+                  easing: "swing",
+                  step: function () {
+                    $this.text(Math.floor(this.countNum));
+                  },
+                  complete: function () {
+                    $this.text(this.countNum);
+                  },
+                }
+              );
+              $this.attr("ended", "true");
+            }
+          });
+        }
+        //Start animation on page-load
+        if (isScrolledIntoView(".counter")) {
+          countUp();
+        }
+        //Start animation on screen
+        $(document).scroll(function () {
+          if (isScrolledIntoView(".counter")) {
+            countUp();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

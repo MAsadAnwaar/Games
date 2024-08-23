@@ -1,0 +1,133 @@
+//Banner Section Start
+.banner__section{
+    position: relative;
+}
+
+.banner__left__wrap{
+    .owl-nav{
+        button.owl-prev{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 150px;
+            transition: all 0.3s;
+            i{
+                font-size: 28px;
+                color: var(--white-color);
+                transition: all 0.3s;
+            }
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        button.owl-next{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 150px;
+            transition: all 0.3s;
+            i{
+                font-size: 28px;
+                color: var(--white-color);
+                transition: all 0.3s;
+            }
+            &:hover{
+                background-color: transparent;
+              i{
+                color: var(--white-color);
+              }
+            }
+        }
+    }
+    .owl-dots{
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        .owl-dot{
+            span{
+                background-color: #13151B;
+                width: 12px;
+                height: 12px;
+            }
+            &.active{
+                span{
+                    background-color: #77C746;
+                    width: 12px;
+                }
+            }
+        }
+    }
+}
+.banner__left__wrap .owl-item.active.center .banner__left__items{
+    z-index: 8;
+    opacity: 1;
+    text-align: left;
+    &::before{
+        background: linear-gradient(81.8deg, #13151B 0.59%, rgba(19, 21, 27, 0.54) 38.75%, rgba(19, 21, 27, 0) 61.53%);
+    }
+}
+.banner__left__items{
+    background: url(../../assets/img/banner/bn1.png) no-repeat right top;
+    background-size: cover;
+    padding: 140px 100px 145px;
+    height: 100%;
+    transform: skewX(-15deg);
+    position: relative;
+    margin:  0 auto;
+    opacity: 0.4;
+    &::before{
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: rgba($color: #000000, $alpha: 0.4)
+    }.shape__thumb{
+        max-width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        img{
+            @include imgw;
+            object-fit: contain;
+            border-radius: 0 0 20px 20px;
+        }
+    }
+    .banner__content{
+        text-align: left;
+        position: relative;
+        max-width: 690px;
+        h1{
+            margin-bottom: 10px;
+            transform: skewX(15deg);  
+            color: var(--white-color);
+        }
+        p{
+            transform: skewX(15deg); 
+            color: var(--white-color);   
+            margin-bottom: 40px;
+            padding-left: 32px;        
+        }
+        .cmn--btn{
+            transform: skewX(15deg); 
+            span{
+                transform: skewX(31deg);
+                letter-spacing: 1px;
+            }      
+        }
+    }
+    .banner__btn{
+        padding-left: 75px;
+        .cmn--btn{
+            font-weight: 600;
+        }
+    }
+}
+.banner__items__two{
+    background: url(../../assets/img/banner/bn2.png) no-repeat right top;
+    background-size: cover;
+}
+.banner__items__three{
+    background: url(../../assets/img/banner/bn2.png) no-repeat right top;
+    background-size: cover;
+}
+
+//Banner Section End
