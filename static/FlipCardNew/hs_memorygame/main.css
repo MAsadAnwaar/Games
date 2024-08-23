@@ -58,6 +58,7 @@ figure {
 	margin: auto;
 	padding: 5px;
 	text-align: center;
+	background-size: cover; /* Ensure the image covers the entire div */
 	background-color: rgba(255,255,255,0.6);
     background-position: center;  /* Center the image within the div */
     background-repeat: no-repeat; /* Prevent image repetition */
