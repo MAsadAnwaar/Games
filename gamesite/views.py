@@ -120,10 +120,45 @@ def fend_project_memory_game(request):
 def Flip_and_Find(request):
     
     return render(request, 'FlipCardNew/Flip_and_Find/index.html')
+# views.py
+from django.shortcuts import render
+from .models import Card, BackgroundImage
+import random
 
 def hs_memorygame(request):
+    cards = list(Card.objects.all())
+    backgrounds = list(BackgroundImage.objects.all())
     
-    return render(request, 'FlipCardNew/hs_memorygame/index.html')
+    if len(cards) < 6:
+        raise ValueError("Not enough images in the database")
+
+    if not backgrounds:
+        raise ValueError("No background images in the database")
+
+    selected_cards = random.sample(cards, 6) * 2
+    random.shuffle(selected_cards)
+
+    card_data = [{'id': i, 'name': card.name, 'image_url': card.image.url} for i, card in enumerate(selected_cards)]
+    background_image = random.choice(backgrounds).image.url  # Choose a random background image
+
+    return render(request, 'FlipCardNew/hs_memorygame/index.html', {'card_data': card_data, 'background_image': background_image})
+
+from django.http import JsonResponse
+from .models import BackgroundImage
+import random
+
+def get_new_background_image(request):
+    backgrounds = list(BackgroundImage.objects.all())
+    
+    if not backgrounds:
+        return JsonResponse({'error': 'No background images found'}, status=404)
+    
+    new_background = random.choice(backgrounds).image.url
+    return JsonResponse({'background_image': new_background})
+
+
+
+
 
 def memory___game(request):
     

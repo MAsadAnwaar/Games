@@ -13,23 +13,36 @@ const pontuacaoAcertar = 20; // Pontos ganhos ao acertar
 const pontuacaoErrar = -5;   // Pontos ganhos ao errar
 
 function inicializar() {   
-	caixasViradas = [];  
-	imagensViradas = [];
-	
-	qtosCompletados = 0;
-	pontos = 0;
+    caixasViradas = [];  
+    imagensViradas = [];
+    
+    qtosCompletados = 0;
+    pontos = 0;
 
-	document.getElementById("span-pontos").innerHTML = "Pontos: 0";
+    document.getElementById("span-pontos").innerHTML = "Pontos: 0";
 
-	for(i=0; i<12; i++) {
-		document.getElementById("container" + i).style.opacity = '1';
-        document.getElementById("carta" + i).style.transform = 'rotatey(0deg)'
-		caixasDesativadas[i] = false;
-	}
-		
-	ajustarCursor();
-	embaralharImagens();
-}	
+    for(i = 0; i < 12; i++) {
+        document.getElementById("container" + i).style.opacity = '1';
+        document.getElementById("carta" + i).style.transform = 'rotateY(0deg)';
+        caixasDesativadas[i] = false;
+    }
+    
+    ajustarCursor();
+    embaralharImagens();
+
+    // Fetch a new background image URL from the server
+    fetch('/get_new_background_image/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.background_image) {
+                document.getElementById('principal').style.backgroundImage = `url(${data.background_image})`;
+            } else {
+                console.error('Background image not found');
+            }
+        })
+        .catch(error => console.error('Error fetching new background image:', error));
+}
+
 
 function embaralharImagens() {
 	i = 0;
@@ -139,7 +152,21 @@ function ajustarCursor() {
 }
 
 function fimDeJogo() {
-	alert("Fim do jogo!");
-	alert("Você fez " + pontos + " pontos");
-    alert("Clique em reiniciar para jogar novamente!")
+    alert("Fim do jogo!");
+    alert("Você fez " + pontos + " pontos");
+    alert("Clique em reiniciar para jogar novamente!");
+
+    // Fetch a new background image URL from the server
+    fetch('/get_new_background_image/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.background_image) {
+                document.getElementById('principal').style.backgroundImage = `url(${data.background_image})`;
+            } else {
+                console.error('Background image not found');
+            }
+        })
+        .catch(error => console.error('Error fetching new background image:', error));
 }
+
+

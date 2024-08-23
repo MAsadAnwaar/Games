@@ -1,3 +1,16 @@
+# models.py
 from django.db import models
 
-# Create your models here.
+class Card(models.Model):
+    image = models.ImageField(upload_to='memorygame/')
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+        
+class BackgroundImage(models.Model):
+    image = models.ImageField(upload_to='backgrounds/')
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
