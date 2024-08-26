@@ -6,15 +6,20 @@
 body {
     margin: 0;
     background-image: url(img/pagebg.jpg);
-    background-size: cover;
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents background image from repeating */
     font-family: "HS Font", sans-serif;
+    overflow: hidden; /* Prevent scrollbars due to scaling */
 }
 
 #scale-wrapper {
-    transform: scale(0.50); /* Scales the content to 67% */
+    transform: scale(0.58); /* Scales the content to 60% */
     transform-origin: top left; /* Ensures scaling starts from the top-left corner */
-    width: 150%; /* Adjusts width to account for scaling */
-    height: 150%; /* Adjusts height to account for scaling */
+    width: 166.67%; /* Adjusted width to account for scaling: 100% / 0.60 */
+    height: 166.67%; /* Adjusted height to account for scaling: 100% / 0.60 */
+    margin: 10px 10px 20px 10px; /* 10px margin on top, left, and right sides; no margin on bottom */
+    position: relative; /* Ensures the wrapper can be positioned properly */
 }
 
 #principal {
@@ -62,7 +67,7 @@ body {
 figure {
     margin: 0;
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 100%;
     backface-visibility: hidden;
 }
