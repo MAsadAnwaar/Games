@@ -9,7 +9,11 @@
 </head>
 <body>
     <div id="scale-wrapper">
+        <div id="level-display">
+            <span id="current-level">Level: 1</span>
+        </div>
         <div id="principal" style="background-image: url('{{ background_image }}');">
+            
             {% for card in card_data %}
                 <section id="container{{ card.id }}" onclick="caixaClick(this)">
                     <div id="carta{{ card.id }}">
@@ -22,7 +26,7 @@
         
         <div id="informacoes">
             <span id="span-pontos">Points: 0</span>
-            <input type="button" id="botao" value="Reiniciar" onclick="inicializar()">
+            <input type="button" id="botao" value="Next Level" onclick="inicializar()" style="display: none;">
         </div>
     </div>
     <script>

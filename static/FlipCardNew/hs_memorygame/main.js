@@ -5,6 +5,7 @@ var imagensViradas = [];
 var caixasDesativadas = [];
 var qtosCompletados;
 var pontos;
+var nivel = 1; // Track the current level
 
 const pontuacaoAcertar = 20;
 const pontuacaoErrar = -5;
@@ -18,6 +19,7 @@ function inicializar() {
     pontos = 0;
 
     document.getElementById("span-pontos").innerHTML = "Pontos: 0";
+    document.getElementById("current-level").innerHTML = "Level: " + nivel;
 
     for (let i = 0; i < 32; i++) {
         document.getElementById("container" + i).style.opacity = '1';
@@ -25,7 +27,6 @@ function inicializar() {
         caixasDesativadas[i] = false;
     }
     
-
     // Populate the imagens array with card data from Django
     imagens = cardData.map(card => card.image_url);
     embaralharImagens();
@@ -40,6 +41,8 @@ function inicializar() {
             }
         })
         .catch(error => console.error('Error fetching new background image:', error));
+
+    document.getElementById('botao').style.display = 'none'; // Hide the Next Level button initially
 }
 
 function embaralharImagens() {
@@ -77,7 +80,9 @@ function caixaClick(objeto) {
 
                 setTimeout(esconderImagens, 1000);
 
-                if (qtosCompletados === 16) setTimeout(fimDeJogo, 1500);
+                if (qtosCompletados === 32) {
+                    setTimeout(fimDeJogo, 1500);
+                }
             } else {
                 setTimeout(voltarImagensViradas, 1000);
             }
@@ -133,18 +138,10 @@ function ajustarCursor() {
 }
 
 function fimDeJogo() {
-    alert("Fim do jogo!");
-    alert("Você fez " + pontos + " pontos");
-    alert("Clique em reiniciar para jogar novamente!");
-
-    fetch('/get_new_background_image/')
-        .then(response => response.json())
-        .then(data => {
-            if (data.background_image) {
-                document.getElementById('principal').style.backgroundImage = `url(${data.background_image})`;
-            } else {
-                console.error('Background image not found');
-            }
-        })
-        .catch(error => console.error('Error fetching new background image:', error));
+    document.getElementById('botao').style.display = 'block'; // Show the Next Level button
+    document.getElementById('botao').value = 'Next Level';
+    document.getElementById('botao').onclick = function() {
+        nivel++;
+        inicializar(); // Restart the game with the new level
+    };
 }

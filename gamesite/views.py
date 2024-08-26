@@ -128,11 +128,6 @@ from .models import Card, BackgroundImage
 import random
 from django.http import JsonResponse
 
-import random
-from django.shortcuts import render
-from django.http import JsonResponse
-from .models import Card, BackgroundImage
-
 def hs_memorygame(request):
     cards = list(Card.objects.all())
     backgrounds = list(BackgroundImage.objects.all())
