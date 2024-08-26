@@ -132,14 +132,4 @@ figure {
     border-bottom-left-radius: 20px;
 }
 
-/* Media Queries for better responsiveness */
-@media (max-width: 1024px) {
-    #principal {
-        width: 90%;
-        height: auto;
-    }
 
-    #informacoes {
-        width: 90%;
-    }
-}
