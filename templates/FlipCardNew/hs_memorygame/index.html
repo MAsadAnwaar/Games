@@ -1,26 +1,29 @@
 {% load static %}
-<html> 
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Jogo da Memória Hearthstone</title>
     <link rel="stylesheet" type="text/css" href="{% static 'FlipCardNew/hs_memorygame/main.css' %}">
-    <script src="{% static 'FlipCardNew/hs_memorygame/main.js' %}"></script> 
+    <script src="{% static 'FlipCardNew/hs_memorygame/main.js' %}"></script>
 </head>
 <body>
-    <div id="principal" style="background-image: url('{{ background_image }}');">
-        {% for card in card_data %}
-            <section id="container{{ card.id }}" onclick="caixaClick(this)">
-                <div id="carta{{ card.id }}">
-                    <figure id="frente"></figure>
-                    <figure id="costa{{ card.id }}" style="background-image: url('{{ card.image_url }}');"></figure>
-                </div>
-            </section>
-        {% endfor %}
-    </div>
-    
-    <div id="informacoes">
-        <span id="span-pontos">Pontos: 0</span>
-        <input type="button" id="botao" value="Reiniciar" onclick="inicializar()">
+    <div id="scale-wrapper">
+        <div id="principal" style="background-image: url('{{ background_image }}');">
+            {% for card in card_data %}
+                <section id="container{{ card.id }}" onclick="caixaClick(this)">
+                    <div id="carta{{ card.id }}">
+                        <figure id="frente"></figure>
+                        <figure id="costa{{ card.id }}" style="background-image: url('{{ card.image_url }}');"></figure>
+                    </div>
+                </section>
+            {% endfor %}
+        </div>
+        
+        <div id="informacoes">
+            <span id="span-pontos">Pontos: 0</span>
+            <input type="button" id="botao" value="Reiniciar" onclick="inicializar()">
+        </div>
     </div>
     <script>
         // Pass card data to JavaScript

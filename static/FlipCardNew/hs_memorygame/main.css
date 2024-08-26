@@ -7,6 +7,14 @@ body {
     margin: 0;
     background-image: url(img/pagebg.jpg);
     background-size: cover;
+    font-family: "HS Font", sans-serif;
+}
+
+#scale-wrapper {
+    transform: scale(0.67); /* Scales the content to 67% */
+    transform-origin: top left; /* Ensures scaling starts from the top-left corner */
+    width: 150%; /* Adjusts width to account for scaling */
+    height: 150%; /* Adjusts height to account for scaling */
 }
 
 #principal {
@@ -91,7 +99,6 @@ figure {
     width: 500px;
     margin: 0 auto;
     font-size: 60px;
-    font-family: "HS Font";
     bottom: 2px;
 }
 
@@ -101,7 +108,6 @@ figure {
     width: 110px;
     bottom: 15px;
     margin-left: 50px;
-    font-family: "HS Font";
     font-size: 20px;
     border: 1px solid black;
     background-color: rgba(255, 255, 255, 0.6);
@@ -124,4 +130,16 @@ figure {
     background-color: rgba(255, 255, 255, 0.6);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 1024px) {
+    #principal {
+        width: 90%;
+        height: auto;
+    }
+
+    #informacoes {
+        width: 90%;
+    }
 }
