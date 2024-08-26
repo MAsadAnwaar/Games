@@ -4,7 +4,7 @@ var caixasViradas = [];
 var imagensViradas = [];
 var caixasDesativadas = [];
 var qtosCompletados;
-var pontos;
+var points;
 var nivel = 1; // Track the current level
 
 const pontuacaoAcertar = 20;
@@ -16,9 +16,9 @@ function inicializar() {
     caixasDesativadas = [];
     
     qtosCompletados = 0;
-    pontos = 0;
+    points = 0;
 
-    document.getElementById("span-pontos").innerHTML = "Pontos: 0";
+    document.getElementById("span-points").innerHTML = "points: 0";
     document.getElementById("current-level").innerHTML = "Level: " + nivel;
 
     for (let i = 0; i < 32; i++) {
@@ -123,8 +123,8 @@ function esconderImagens() {
 }
 
 function atualizarPontuacao(valor) {
-    pontos += valor;
-    document.getElementById("span-pontos").innerHTML = "Pontos: " + pontos;
+    points += valor;
+    document.getElementById("span-points").innerHTML = "points: " + points;
 }
 
 function ajustarCursor() {
