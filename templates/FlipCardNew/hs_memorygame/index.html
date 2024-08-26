@@ -1,13 +1,11 @@
 {% load static %}
 <html> 
 <head>
-	<meta charset="utf-8">
-	<title>Jogo da Memória Hearthstone</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'FlipCardNew/hs_memorygame/main.css' %}">
-	<script src="{% static 'FlipCardNew/hs_memorygame/main.js' %}">
-	</script> 
+    <meta charset="utf-8">
+    <title>Jogo da Memória Hearthstone</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'FlipCardNew/hs_memorygame/main.css' %}">
+    <script src="{% static 'FlipCardNew/hs_memorygame/main.js' %}"></script> 
 </head>
-
 <body>
     <div id="principal" style="background-image: url('{{ background_image }}');">
         {% for card in card_data %}
@@ -19,6 +17,7 @@
             </section>
         {% endfor %}
     </div>
+    
     <div id="informacoes">
         <span id="span-pontos">Pontos: 0</span>
         <input type="button" id="botao" value="Reiniciar" onclick="inicializar()">
@@ -29,4 +28,4 @@
         inicializar();
     </script>
 </body>
-</html>	
+</html>
