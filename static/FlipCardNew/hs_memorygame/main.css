@@ -14,7 +14,7 @@ body {
 }
 
 #scale-wrapper {
-    transform: scale(0.58); /* Scales the content to 60% */
+    transform: scale(0.56); /* Scales the content to 60% */
     transform-origin: top left; /* Ensures scaling starts from the top-left corner */
     width: 166.67%; /* Adjusted width to account for scaling: 100% / 0.60 */
     height: 166.67%; /* Adjusted height to account for scaling: 100% / 0.60 */
