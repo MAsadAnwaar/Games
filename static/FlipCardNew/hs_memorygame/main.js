@@ -55,20 +55,20 @@ function inicializar() {
     imagens = cardData.map(card => card.image_url);
     embaralharImagens();
 
-    // Fetch the background image if needed
-    fetch('/get_new_background_image/')
-        .then(response => response.json())
-        .then(data => {
-            if (data.background_image) {
-                document.getElementById('principal').style.backgroundImage = `url(${data.background_image})`;
-            } else {
-                console.error('Background image not found');
-            }
-        })
-        .catch(error => console.error('Error fetching new background image:', error));
+    // Fetch the background image based on level
+    document.getElementById('principal').style.backgroundImage = `url(${background_image})`;
 
     document.getElementById('botao').style.display = 'none'; // Hide the Next Level button initially
 }
+
+function goToNextLevel() {
+    if (nivel < maxLevel) {
+        window.location.href = `/hs_memorygame/?level=${nivel + 1}`;
+    } else {
+        alert("Congratulations! You've completed the game.");
+    }
+}
+
 
 function embaralharImagens() {
     // Update the number of images based on the grid size
