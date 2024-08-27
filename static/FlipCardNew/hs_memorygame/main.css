@@ -74,7 +74,7 @@ body {
     width: 140px; /* Adjusted width for 4 columns */
     height: 120px; /* Adjusted height for 8 rows */
     float: left;
-    margin: 10px;
+    margin: 0px;
     cursor: pointer;
     perspective: 600px;
     transition: 0.5s;
