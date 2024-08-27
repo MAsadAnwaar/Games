@@ -4,24 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title>Flip Card Images</title>
+    <meta name="nivel" content="{{ level }}">
+
     <link rel="stylesheet" type="text/css" href="{% static 'FlipCardNew/hs_memorygame/main.css' %}">
     <script src="{% static 'FlipCardNew/hs_memorygame/main.js' %}"></script>
 </head>
 <body>
     <div id="scale-wrapper">
-        <div id="level-display">
-            <span id="current-level">Level: 1</span>
-        </div>
         <div id="principal" style="background-image: url('{{ background_image }}');">
-            
-            {% for card in card_data %}
-                <section id="container{{ card.id }}" onclick="caixaClick(this)">
-                    <div id="carta{{ card.id }}">
-                        <figure id="frente"></figure>
-                        <figure id="costa{{ card.id }}" style="background-image: url('{{ card.image_url }}');"></figure>
-                    </div>
-                </section>
-            {% endfor %}
+            <div id="grid-container"></div> <!-- Container for the cards -->
+            <div id="level-display">
+                <span id="current-level">Level: {{ level }}</span>
+            </div>
         </div>
         
         <div id="informacoes">
@@ -32,7 +26,19 @@
     <script>
         // Pass card data to JavaScript
         const cardData = {{ card_data|safe }};
+        const level = {{ level }};
+        const maxLevel = {{ max_level }};
+
         inicializar();
+
+        // Additional script to handle level changes
+        function goToNextLevel() {
+            if (level < maxLevel) {
+                window.location.href = `/hs_memorygame/?level=${level + 1}`;
+            } else {
+                alert("Congratulations! You've completed the game.");
+            }
+        }
     </script>
 </body>
 </html>

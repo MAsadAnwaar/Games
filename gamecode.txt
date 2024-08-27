@@ -1,0 +1,388 @@
+this is my views.py 
+
+def hs_memorygame(request):
+    cards = list(Card.objects.all())
+    backgrounds = list(BackgroundImage.objects.all())
+    
+    if len(cards) < 16:  # Ensure there are enough cards
+        raise ValueError("Not enough images in the database")
+
+    if not backgrounds:
+        raise ValueError("No background images in the database")
+
+    selected_cards = random.sample(cards, 16) * 2  # 32 cards (16 pairs)
+    random.shuffle(selected_cards)
+
+    # Provide image URLs directly
+    card_data = [{'id': i, 'image_url': card.image_url()} for i, card in enumerate(selected_cards)]
+    background_image = random.choice(backgrounds).image.url  # Choose a random background image
+
+    return render(request, 'FlipCardNew/hs_memorygame/index.html', {
+        'card_data': card_data,
+        'background_image': background_image
+    })
+
+
+
+
+def get_new_background_image(request):
+    backgrounds = list(BackgroundImage.objects.all())
+    
+    if not backgrounds:
+        return JsonResponse({'error': 'No background images found'}, status=404)
+    
+    new_background = random.choice(backgrounds).image.url
+    return JsonResponse({'background_image': new_background})
+index.html 
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flip Card Images</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'FlipCardNew/hs_memorygame/main.css' %}">
+    <script src="{% static 'FlipCardNew/hs_memorygame/main.js' %}"></script>
+</head>
+<body>
+    <div id="scale-wrapper">
+        
+        <div id="principal" style="background-image: url('{{ background_image }}');">
+            
+            {% for card in card_data %}
+                <section id="container{{ card.id }}" onclick="caixaClick(this)">
+                    <div id="carta{{ card.id }}">
+                        <figure id="frente"></figure>
+                        <figure id="costa{{ card.id }}" style="background-image: url('{{ card.image_url }}');"></figure>
+                    </div>
+                </section>
+            {% endfor %}
+            <div id="level-display">
+            <span id="current-level">Level: 1</span>
+        </div>
+        </div>
+        
+        <div id="informacoes">
+            <span id="span-points">Points: 0</span>
+            <input type="button" id="botao" value="Next Level" onclick="inicializar()" style="display: none;">
+        </div>
+    </div>
+    <script>
+        // Pass card data to JavaScript
+        const cardData = {{ card_data|safe }};
+        inicializar();
+    </script>
+</body>
+</html>
+main.js
+var imagens = []; // This will be dynamically populated
+
+var caixasViradas = [];
+var imagensViradas = [];
+var caixasDesativadas = [];
+var qtosCompletados;
+var points;
+var nivel = 1; // Track the current level
+
+const pontuacaoAcertar = 20;
+const pontuacaoErrar = -5;
+
+function inicializar() {
+    caixasViradas = [];
+    imagensViradas = [];
+    caixasDesativadas = [];
+    
+    qtosCompletados = 0;
+    points = 0;
+
+    document.getElementById("span-points").innerHTML = "points: 0";
+    document.getElementById("current-level").innerHTML = "Level: " + nivel;
+
+    for (let i = 0; i < 32; i++) {
+        document.getElementById("container" + i).style.opacity = '1';
+        document.getElementById("carta" + i).style.transform = 'rotateY(0deg)';
+        caixasDesativadas[i] = false;
+    }
+    
+    // Populate the imagens array with card data from Django
+    imagens = cardData.map(card => card.image_url);
+    embaralharImagens();
+
+    fetch('/get_new_background_image/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.background_image) {
+                document.getElementById('principal').style.backgroundImage = url(${data.background_image});
+            } else {
+                console.error('Background image not found');
+            }
+        })
+        .catch(error => console.error('Error fetching new background image:', error));
+
+    document.getElementById('botao').style.display = 'none'; // Hide the Next Level button initially
+}
+
+function embaralharImagens() {
+    // Shuffle the imagens array
+    for (let i = imagens.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imagens[i], imagens[j]] = [imagens[j], imagens[i]];
+    }
+}
+
+function caixaClick(objeto) {
+    var idDoContainer = objeto.id.slice(9, 11);
+    var imagemDaCaixa = imagens[idDoContainer];
+
+    if (!caixasDesativadas[idDoContainer] && imagensViradas.length < 2) {
+        document.getElementById("carta" + idDoContainer).style.transform = "rotateY(180deg)";
+        document.getElementById("costa" + idDoContainer).style.backgroundImage = url(${imagemDaCaixa});
+
+        if (imagensViradas.length === 0) {
+            imagensViradas.push(imagemDaCaixa);
+            caixasViradas.push(idDoContainer);
+            caixasDesativadas[caixasViradas[0]] = true;
+            ajustarCursor();
+        } else if (imagensViradas.length === 1) {
+            imagensViradas.push(imagemDaCaixa);
+            caixasViradas.push(idDoContainer);
+            caixasDesativadas[caixasViradas[1]] = true;
+            ajustarCursor();
+
+            if (imagensViradas[0] === imagensViradas[1]) {
+                qtosCompletados += 2;
+                caixasDesativadas[caixasViradas[0]] = true;
+                caixasDesativadas[caixasViradas[1]] = true;
+                ajustarCursor();
+
+                setTimeout(esconderImagens, 1000);
+
+                if (qtosCompletados === 32) {
+                    setTimeout(fimDeJogo, 1500);
+                }
+            } else {
+                setTimeout(voltarImagensViradas, 1000);
+            }
+        }
+    }
+}
+
+function voltarImagensViradas() {
+    document.getElementById("carta" + caixasViradas[0]).style.transform = "rotateY(0deg)";
+    document.getElementById("carta" + caixasViradas[1]).style.transform = "rotateY(0deg)";
+
+    caixasDesativadas[caixasViradas[0]] = false;
+    caixasDesativadas[caixasViradas[1]] = false;
+
+    ajustarCursor();
+
+    imagensViradas = [];
+    caixasViradas = [];
+
+    atualizarPontuacao(pontuacaoErrar);
+}
+
+function esconderImagens() {
+    document.getElementById("container" + caixasViradas[0]).style.opacity = '0';
+    document.getElementById("container" + caixasViradas[1]).style.opacity = '0';
+
+    atualizarPontuacao(pontuacaoAcertar);
+
+    setTimeout(ajustarEscondidas, 500);
+
+    function ajustarEscondidas() {
+        document.getElementById("carta" + caixasViradas[0]).style.transform = "rotateY(0deg)";
+        document.getElementById("carta" + caixasViradas[1]).style.transform = "rotateY(0deg)";
+
+        imagensViradas = [];
+        caixasViradas = [];
+    }
+}
+
+function atualizarPontuacao(valor) {
+    points += valor;
+    document.getElementById("span-points").innerHTML = "points: " + points;
+}
+
+function ajustarCursor() {
+    for (let i = 0; i < caixasDesativadas.length; i++) {
+        if (caixasDesativadas[i]) {
+            document.getElementById("container" + i).style.cursor = 'default';
+        } else {
+            document.getElementById("container" + i).style.cursor = 'pointer';
+        }
+    }
+}
+
+function fimDeJogo() {
+    document.getElementById('botao').style.display = 'block'; // Show the Next Level button
+    document.getElementById('botao').value = 'Next Level';
+    document.getElementById('botao').onclick = function() {
+        nivel++;
+        inicializar(); // Restart the game with the new level
+    };
+}
+main.css
+@font-face {
+    font-family: HS Font;
+    src: url('font/OPTIBelwe-Medium.otf');
+}
+
+body {
+    margin: 0;
+    background-image: url(img/pagebg.jpg);
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+    font-family: "HS Font", sans-serif;
+    overflow: hidden; /* Prevent scrollbars due to scaling */
+}
+
+#scale-wrapper {
+    transform: scale(0.58); /* Scales the content to 60% */
+    transform-origin: top left; /* Ensures scaling starts from the top-left corner */
+    width: 166.67%; /* Adjusted width to account for scaling: 100% / 0.60 */
+    height: 166.67%; /* Adjusted height to account for scaling: 100% / 0.60 */
+    margin: 10px 10px 20px 10px; /* 10px margin on top, left, and right sides; no margin on bottom */
+    position: relative; /* Ensures the wrapper can be positioned properly */
+}
+
+#level-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#principal {
+    position: relative;
+    top: 20px;
+    height: 1110px; /* Adjusted height for the 4x8 grid */
+    width: 640px; /* Adjusted width for the 4x8 grid */
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#container0, #container1, #container2, #container3, #container4, #container5, #container6, #container7,
+#container8, #container9, #container10, #container11, #container12, #container13, #container14, #container15,
+#container16, #container17, #container18, #container19, #container20, #container21, #container22, #container23,
+#container24, #container25, #container26, #container27, #container28, #container29, #container30, #container31 {
+    border-radius: 35px;
+    width: 140px; /* Adjusted width for 4 columns */
+    height: 120px; /* Adjusted height for 8 rows */
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+    perspective: 600px;
+    transition: 0.5s;
+    overflow: hidden; /* Ensures that images do not overflow out of the container */
+}
+
+#carta0, #carta1, #carta2, #carta3, #carta4, #carta5, #carta6, #carta7,
+#carta8, #carta9, #carta10, #carta11, #carta12, #carta13, #carta14, #carta15,
+#carta16, #carta17, #carta18, #carta19, #carta20, #carta21, #carta22, #carta23,
+#carta24, #carta25, #carta26, #carta27, #carta28, #carta29, #carta30, #carta31 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+figure {
+    margin: 0;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+	
+}
+
+#frente {
+    background-image: url(img/bg.jpg);
+    background-size: contain; /* Ensures the background image fits within the card */
+    background-position: center;
+    background-color: #fff; /* Optional: Add a background color to fill any space around the image */
+    border-radius: 35px;
+    transition: background-image 0.4s;
+}
+
+#frente:hover {
+    background-image: url(img/bghover.jpg);
+    background-size: contain; /* Ensures the hover image fits within the card */
+}
+
+#costa0, #costa1, #costa2, #costa3, #costa4, #costa5, #costa6, #costa7,
+#costa8, #costa9, #costa10, #costa11, #costa12, #costa13, #costa14, #costa15,
+#costa16, #costa17, #costa18, #costa19, #costa20, #costa21, #costa22, #costa23,
+#costa24, #costa25, #costa26, #costa27, #costa28, #costa29, #costa30, #costa31 {
+    background-image: url(img/1.jpg);
+    background-size: contain; /* Ensures the background image fits within the card */
+    background-position: center;
+    background-color: #fff; /* Optional: Add a background color to fill any space around the image */
+    border-radius: 35px;
+    border: 2px solid black;
+    transform: rotateY(180deg);
+}
+
+#span-points {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    font-size: 60px;
+    bottom: 2px;
+}
+
+#botao {
+    position: relative;
+    height: 50px;
+    width: 110px;
+    bottom: 15px;
+    margin-left: 50px;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#botao:hover {
+    background-color: white;
+}
+
+#informacoes {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    width: 650px; /* Adjusted width to match the #principal div */
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+#level-display {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+in this game the funcaton not change just the grid change according on each 2 levels up the it must be start from 4*3 and after 2 levels up it must be 4*4 and it increases each 2 leavels up and i increases like 4*3 , 4*4, 4*5 , 4*6,4*7and 4*8 and this is the last level 12 4*8 grid after this last level the leavel only change but not the grid grid size must be 4*8 only 

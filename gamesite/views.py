@@ -138,20 +138,26 @@ def hs_memorygame(request):
     if not backgrounds:
         raise ValueError("No background images in the database")
 
+    # Number of background images defines the maximum level
+    max_level = len(backgrounds)
+    level = int(request.GET.get('level', 1))  # Get the level from request or default to 1
+
+    if level > max_level:
+        level = max_level  # Ensure level does not exceed the number of backgrounds
+
     selected_cards = random.sample(cards, 16) * 2  # 32 cards (16 pairs)
     random.shuffle(selected_cards)
 
     # Provide image URLs directly
     card_data = [{'id': i, 'image_url': card.image_url()} for i, card in enumerate(selected_cards)]
-    background_image = random.choice(backgrounds).image.url  # Choose a random background image
+    background_image = backgrounds[level - 1].image.url  # Choose the background image based on the level
 
     return render(request, 'FlipCardNew/hs_memorygame/index.html', {
         'card_data': card_data,
-        'background_image': background_image
+        'background_image': background_image,
+        'level': level,
+        'max_level': max_level
     })
-
-
-
 
 def get_new_background_image(request):
     backgrounds = list(BackgroundImage.objects.all())
