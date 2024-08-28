@@ -110,8 +110,8 @@ figure {
     background-color: #fff;
     border-radius: 35px; /* Rounded corners */
     transition: background-image 0.4s; /* Smooth transition for background changes */
-    width: 100%; /* Ensure full width */
-    height: 100%; /* Ensure full height */
+    width: 97%; /* Ensure full width */
+    height: 97%; /* Ensure full height */
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
