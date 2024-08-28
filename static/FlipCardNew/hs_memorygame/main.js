@@ -196,3 +196,14 @@ function goToNextLevel() {
         alert("Congratulations! You've completed the game.");
     }
 }
+function openImage(element) {
+    const modal = document.getElementById('image-modal');
+    const fullImage = document.getElementById('full-image');
+    fullImage.src = element.src;
+    modal.style.display = "block";
+}
+
+function closeImage() {
+    const modal = document.getElementById('image-modal');
+    modal.style.display = "none";
+}

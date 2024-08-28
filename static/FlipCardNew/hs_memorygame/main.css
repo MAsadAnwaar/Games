@@ -103,8 +103,8 @@ figure {
 }
 
 #frente {
-    background-image: url(img/bg.jpg);
-    background-size: contain; /* Ensure the image fits within the element */
+    background-image: url(img/bg.png);
+    background-size: cover; /* Ensure the image fits within the element */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating the image */
     background-color: #fff;
@@ -118,8 +118,8 @@ figure {
 }
 
 #frente:hover {
-    background-image: url(img/bghover.jpg);
-    background-size: contain; /* Ensure the hover image covers the entire element */
+    background-image: url(img/bghover.png);
+    background-size: cover; /* Ensure the hover image covers the entire element */
 }
 
 #costa0, #costa1, #costa2, #costa3, #costa4, #costa5, #costa6, #costa7,
@@ -127,7 +127,7 @@ figure {
 #costa16, #costa17, #costa18, #costa19, #costa20, #costa21, #costa22, #costa23,
 #costa24, #costa25, #costa26, #costa27, #costa28, #costa29, #costa30, #costa31 {
     background-image: url(img/1.jpg);
-    background-size: contain; /* Ensures the background image fits within the card */
+    background-size: cover; /* Ensures the background image fits within the card */
     background-position: center;
     background-color: #fff; /* Optional: Add a background color to fill any space around the image */
     border-radius: 35px;
@@ -172,13 +172,67 @@ figure {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-#unlocked-images {
-    margin-top: 20px;
-    text-align: center;
+.blurred {
+    filter: blur(8px);
+    pointer-events: none; /* Prevent clicking on the blurred image */
 }
+
+.unlocked-image {
+    cursor: pointer; /* Make the images appear clickable */
+    width: 100px;
+    text-align: center;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s; /* Smooth transition on hover */
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.unlocked-image:hover:not(.blurred) {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
 
 #unlocked-images h2 {
     font-size: 24px;
+    text-align: center;
     font-weight: bold;
     margin-bottom: 10px;
 }
