@@ -30,7 +30,6 @@ urlpatterns = [
     path("fend_project_memory_game", views.fend_project_memory_game, name='fend_project_memory_game'),
     path("Flip_and_Find", views.Flip_and_Find, name='Flip_and_Find'),
     path("hs_memorygame/", views.hs_memorygame, name='hs_memorygame'),
-    path('get_new_background_image/', views.get_new_background_image, name='get_new_background_image'),
     path("memory___game", views.memory___game, name='memory___game'),
     path("Memory__games", views.Memory__games, name='Memory__games'),
     path("memory_game", views.memory_game, name='memory_game'),

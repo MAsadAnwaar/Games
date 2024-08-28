@@ -127,12 +127,11 @@ from django.shortcuts import render
 from .models import Card, BackgroundImage
 import random
 from django.http import JsonResponse
-
 def hs_memorygame(request):
     cards = list(Card.objects.all())
     backgrounds = list(BackgroundImage.objects.all())
 
-    if len(cards) < 16:  # Ensure there are enough cards
+    if len(cards) < 16:
         raise ValueError("Not enough images in the database")
 
     if not backgrounds:
@@ -150,25 +149,19 @@ def hs_memorygame(request):
     card_data = [{'id': i, 'image_url': card.image_url()} for i, card in enumerate(selected_cards)]
     background_image = backgrounds[level - 1].image.url
 
-    # Determine unlocked levels (assuming you want to show completed levels up to the current level)
     unlocked_background_images = [bg.image.url for bg in backgrounds[:level]]
+
+    # Pass the total number of containers (cards) to the template
+    total_containers = 16  # Adjust if necessary based on your game logic
 
     return render(request, 'FlipCardNew/hs_memorygame/index.html', {
         'card_data': card_data,
         'background_image': background_image,
         'level': level,
         'max_level': max_level,
-        'unlocked_background_images': unlocked_background_images  # Pass the unlocked images to the template
+        'unlocked_background_images': unlocked_background_images,
+        'total_containers': total_containers,  # Pass total containers to the template
     })
-
-def get_new_background_image(request):
-    backgrounds = list(BackgroundImage.objects.all())
-    
-    if not backgrounds:
-        return JsonResponse({'error': 'No background images found'}, status=404)
-    
-    new_background = random.choice(backgrounds).image.url
-    return JsonResponse({'background_image': new_background})
 
 
 

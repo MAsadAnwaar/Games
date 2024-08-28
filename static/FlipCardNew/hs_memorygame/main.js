@@ -5,11 +5,10 @@ var caixasDesativadas = [];
 var qtosCompletados;
 var points;
 var nivel; // Track the current level
+var totalContainers; // Track total containers
 
 const pontuacaoAcertar = 20;
 const pontuacaoErrar = -5;
-const CARD_REVEAL_DURATION = 2000; // Duration for showing all cards at the start (in milliseconds)
-const DISTORTION_DURATION = 500; // Duration for distortion effect (in milliseconds)
 
 function inicializar() {
     nivel = parseInt(document.querySelector('meta[name="nivel"]').getAttribute('content')); // Get the current level from meta tag
@@ -61,21 +60,6 @@ function inicializar() {
     document.getElementById('principal').style.backgroundImage = `url(${background_image})`;
 
     document.getElementById('botao').style.display = 'none'; // Hide the Next Level button initially
-
-    // Show all cards briefly
-    setTimeout(() => {
-        document.querySelectorAll("#carta0, #carta1, #carta2, #carta3, #carta4, #carta5, #carta6, #carta7, #carta8, #carta9, #carta10, #carta11, #carta12, #carta13, #carta14, #carta15, #carta16, #carta17, #carta18, #carta19, #carta20, #carta21, #carta22, #carta23, #carta24, #carta25, #carta26, #carta27, #carta28, #carta29, #carta30, #carta31").forEach(carta => {
-            carta.style.transform = "rotateY(180deg)";
-        });
-        setTimeout(() => {
-            document.querySelectorAll("#carta0, #carta1, #carta2, #carta3, #carta4, #carta5, #carta6, #carta7, #carta8, #carta9, #carta10, #carta11, #carta12, #carta13, #carta14, #carta15, #carta16, #carta17, #carta18, #carta19, #carta20, #carta21, #carta22, #carta23, #carta24, #carta25, #carta26, #carta27, #carta28, #carta29, #carta30, #carta31").forEach(carta => {
-                carta.style.transform = "rotateY(0deg)";
-            });
-        }, CARD_REVEAL_DURATION);
-    }, 1000); // Wait for 1 second before showing all cards
-
-    // Make sure card data is correctly formatted
-    console.log("Card Data:", cardData);
 }
 
 function goToNextLevel() {
@@ -85,6 +69,7 @@ function goToNextLevel() {
         alert("Congratulations! You've completed the game.");
     }
 }
+
 
 function embaralharImagens() {
     // Update the number of images based on the grid size
@@ -161,7 +146,7 @@ function esconderImagens() {
 
     atualizarPontuacao(pontuacaoAcertar);
 
-    setTimeout(ajustarEscondidas, DISTORTION_DURATION);
+    setTimeout(ajustarEscondidas, 500);
 
     function ajustarEscondidas() {
         document.getElementById("carta" + caixasViradas[0]).style.transform = "rotateY(0deg)";
@@ -205,6 +190,13 @@ function randomSample(array, size) {
     return shuffled.slice(min);
 }
 
+function goToNextLevel() {
+    if (nivel < maxLevel) {
+        window.location.href = `/hs_memorygame/?level=${nivel + 1}`;
+    } else {
+        alert("Congratulations! You've completed the game.");
+    }
+}
 function openImage(element) {
     const modal = document.getElementById('image-modal');
     const fullImage = document.getElementById('full-image');
