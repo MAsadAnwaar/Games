@@ -104,20 +104,22 @@ figure {
 
 #frente {
     background-image: url(img/bg.jpg);
-    background-size: cover; /* Make sure the image covers the entire element */
-    background-position: center;
+    background-size: contain; /* Ensure the image fits within the element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
     background-color: #fff;
-    border-radius: 35px;
-    transition: background-image 0.4s;
+    border-radius: 35px; /* Rounded corners */
+    transition: background-image 0.4s; /* Smooth transition for background changes */
     width: 100%; /* Ensure full width */
     height: 100%; /* Ensure full height */
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
 }
+
 #frente:hover {
     background-image: url(img/bghover.jpg);
-    background-size: cover; /* Ensure the hover image covers the entire element */
+    background-size: contain; /* Ensure the hover image covers the entire element */
 }
 
 #costa0, #costa1, #costa2, #costa3, #costa4, #costa5, #costa6, #costa7,
@@ -170,6 +172,29 @@ figure {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+#unlocked-images {
+    margin-top: 20px;
+    text-align: center;
+}
 
+#unlocked-images h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
+#unlocked-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.unlocked-image {
+    width: 100px; /* Adjust size as needed */
+    height: 75px; /* Adjust size as needed */
+    object-fit: cover; /* Ensure images fit nicely */
+    border-radius: 10px; /* Optional: Rounded corners */
+    border: 2px solid #ddd; /* Optional: Border to separate images */
+}
 

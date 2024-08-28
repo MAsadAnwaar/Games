@@ -131,32 +131,34 @@ from django.http import JsonResponse
 def hs_memorygame(request):
     cards = list(Card.objects.all())
     backgrounds = list(BackgroundImage.objects.all())
-    
+
     if len(cards) < 16:  # Ensure there are enough cards
         raise ValueError("Not enough images in the database")
 
     if not backgrounds:
         raise ValueError("No background images in the database")
 
-    # Number of background images defines the maximum level
     max_level = len(backgrounds)
-    level = int(request.GET.get('level', 1))  # Get the level from request or default to 1
+    level = int(request.GET.get('level', 1))
 
     if level > max_level:
-        level = max_level  # Ensure level does not exceed the number of backgrounds
+        level = max_level
 
-    selected_cards = random.sample(cards, 16) * 2  # 32 cards (16 pairs)
+    selected_cards = random.sample(cards, 16) * 2
     random.shuffle(selected_cards)
 
-    # Provide image URLs directly
     card_data = [{'id': i, 'image_url': card.image_url()} for i, card in enumerate(selected_cards)]
-    background_image = backgrounds[level - 1].image.url  # Choose the background image based on the level
+    background_image = backgrounds[level - 1].image.url
+
+    # Determine unlocked levels (assuming you want to show completed levels up to the current level)
+    unlocked_background_images = [bg.image.url for bg in backgrounds[:level]]
 
     return render(request, 'FlipCardNew/hs_memorygame/index.html', {
         'card_data': card_data,
         'background_image': background_image,
         'level': level,
-        'max_level': max_level
+        'max_level': max_level,
+        'unlocked_background_images': unlocked_background_images  # Pass the unlocked images to the template
     })
 
 def get_new_background_image(request):
