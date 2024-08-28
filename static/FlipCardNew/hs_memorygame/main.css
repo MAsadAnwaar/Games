@@ -99,7 +99,8 @@ figure {
     height: 100%;
     background-repeat: no-repeat;
     backface-visibility: hidden;    
-	
+    border: 5px solid white; /* Add this line for a white border */
+    box-sizing: border-box; /* Ensure border is included in the width and height */
 }
 
 #frente {
@@ -144,21 +145,20 @@ figure {
 }
 
 #botao {
-    position: relative;
-    height: 50px;
-    width: 110px;
-    bottom: 15px;
-    margin-left: 50px;
-    font-size: 20px;
-    border: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 2px;
-    cursor: pointer;
-    transition: 0.5s;
+    display: block; /* Ensure button is displayed */
+    margin: 20px auto; /* Center the button horizontally and add margin above and below */
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 20px; /* Increase font size for better readability */
+    border: 2px solid #333; /* Add a border for better visibility */
+    background-color: #f4f4f4; /* Light background color */
+    border-radius: 5px; /* Rounded corners for a more modern look */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
 }
 
 #botao:hover {
-    background-color: white;
+    background-color: #ddd; /* Slightly darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 #informacoes {
