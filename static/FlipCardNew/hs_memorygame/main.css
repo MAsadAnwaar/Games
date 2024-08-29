@@ -252,3 +252,86 @@ figure {
     border: 2px solid #ddd; /* Optional: Border to separate images */
 }
 
+
+/* Media Queries */
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    #scale-wrapper {
+        transform: scale(0.45); /* Scale down further for small screens */
+        width: 222.22%;
+        height: 222.22%;
+    }
+
+    #level-display {
+        font-size: 1.2rem;
+    }
+
+    #botao {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    #span-points {
+        font-size: 1.2rem;
+    }
+
+    .unlocked-image {
+        width: 30vw;
+        height: 20vw;
+    }
+}
+
+/* For screens between 481px and 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    #scale-wrapper {
+        transform: scale(0.5); /* Slightly smaller scale for mid-sized screens */
+        width: 200%;
+        height: 200%;
+    }
+
+    #level-display {
+        font-size: 1.4rem;
+    }
+
+    #botao {
+        font-size: 0.9rem;
+        padding: 9px 18px;
+    }
+
+    #span-points {
+        font-size: 1.5rem;
+    }
+
+    .unlocked-image {
+        width: 25vw;
+        height: 18vw;
+    }
+}
+
+/* For screens between 769px and 1080px */
+@media (min-width: 769px) and (max-width: 1080px) {
+    #scale-wrapper {
+        transform: scale(0.58); /* Default scale */
+        width: 166.67%;
+        height: 166.67%;
+    }
+
+    #level-display {
+        font-size: 1.5rem;
+    }
+
+    #botao {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #span-points {
+        font-size: 1.8rem;
+    }
+
+    .unlocked-image {
+        width: 20vw;
+        height: 15vw;
+    }
+}
