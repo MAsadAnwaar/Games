@@ -24,7 +24,7 @@
         <div id="informacoes">
             <span id="span-points">Points: 0</span>
             <input type="button" id="botao" value="Next Level" onclick="inicializar()" style="display: none;">
-            <h2>Unlocked Levels Images</h2>
+            <h2>Unlocked Level Images</h2>
             <div id="unlocked-images-container">
                 {% for image in unlocked_background_images %}
                 <img src="{{ image }}" alt="Unlocked Level" class="unlocked-image {% if forloop.counter == level %}blurred{% endif %}" onclick="openImage(this)">
