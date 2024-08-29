@@ -56,7 +56,7 @@
         inicializar();
 
         function goToNextLevel() {
-            if (level =< maxLevel) {
+            if (level < maxLevel) {
                 window.location.href = `/hs_memorygame/?level=${level + 1}`;
             } else {
                 alert("Congratulations! You've completed the game.");

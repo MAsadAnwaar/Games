@@ -44,7 +44,7 @@ body {
     position: absolute;
     min-width: 640px;
     min-height: 1110px;
-    bottom: 0; /* Zero distance from the bottom */
+    bottom: 10px; /* Zero distance from the bottom */
 }
 
 #level-display {
