@@ -253,3 +253,116 @@ figure {
     border: 2px solid #ddd; /* Optional: Border to separate images */
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    #scale-wrapper {
+        transform: scale(0.5); /* Adjust scaling for smaller screens */
+        width: 200%; /* Adjust width for smaller screens */
+        height: 200%; /* Adjust height for smaller screens */
+    }
+
+    #principal {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Auto height to fit content */
+        margin: 10px auto; /* Center and add margin */
+    }
+
+    #level-display {
+        font-size: 18px; /* Smaller font size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    #botao {
+        font-size: 18px; /* Smaller font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    #span-points {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .unlocked-image {
+        width: 80px; /* Smaller image size */
+        height: 60px; /* Smaller image size */
+    }
+
+    #unlocked-images-container {
+        gap: 5px; /* Adjust gap */
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    #scale-wrapper {
+        transform: scale(0.7); /* Adjust scaling for tablets */
+        width: 140%; /* Adjust width for tablets */
+        height: 140%; /* Adjust height for tablets */
+    }
+
+    #principal {
+        width: 80%; /* Adjust width for tablets */
+        height: auto; /* Auto height to fit content */
+        margin: 20px auto; /* Center and add margin */
+    }
+
+    #level-display {
+        font-size: 20px; /* Adjust font size */
+        padding: 8px; /* Adjust padding */
+    }
+
+    #botao {
+        font-size: 18px; /* Adjust font size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+
+    #span-points {
+        font-size: 50px; /* Adjust font size */
+    }
+
+    .unlocked-image {
+        width: 90px; /* Adjust image size */
+        height: 65px; /* Adjust image size */
+    }
+
+    #unlocked-images-container {
+        gap: 8px; /* Adjust gap */
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 901px) {
+    #scale-wrapper {
+        transform: scale(0.58); /* Original scaling for larger screens */
+        width: 166.67%; /* Original width */
+        height: 166.67%; /* Original height */
+    }
+
+    #principal {
+        width: 640px; /* Original width */
+        height: 1110px; /* Original height */
+        margin: auto; /* Center */
+    }
+
+    #level-display {
+        font-size: 24px; /* Original font size */
+        padding: 10px; /* Original padding */
+    }
+
+    #botao {
+        font-size: 20px; /* Original font size */
+        padding: 10px 20px; /* Original padding */
+    }
+
+    #span-points {
+        font-size: 60px; /* Original font size */
+    }
+
+    .unlocked-image {
+        width: 100px; /* Original image size */
+        height: 75px; /* Original image size */
+    }
+
+    #unlocked-images-container {
+        gap: 10px; /* Original gap */
+    }
+}
