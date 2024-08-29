@@ -15,3 +15,11 @@ class BackgroundImage(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Image(models.Model):
+    image_url = models.ImageField(upload_to='images/')
+    is_premium = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.image_url.url
