@@ -6,7 +6,7 @@ class ImageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Image
-        fields = ['image_url', 'is_premium']
+        fields = ['name','image_url', 'is_premium']
 
     def get_image_url(self, obj):
         request = self.context.get('request')
@@ -18,7 +18,7 @@ class CardSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Card
-        fields = ['image_url', 'is_premium']
+        fields = ['name','image_url', 'is_premium']
 
     def get_image_url(self, obj):
         request = self.context.get('request')

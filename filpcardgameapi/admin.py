@@ -3,7 +3,7 @@ from django.utils.html import format_html
 from .models import Image, Card
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ('image_thumbnail', 'is_premium')
+    list_display = ('image_thumbnail','name', 'is_premium')
     search_fields = ('is_premium',)
 
     def image_thumbnail(self, obj):
@@ -14,7 +14,7 @@ class ImageAdmin(admin.ModelAdmin):
     image_thumbnail.short_description = 'Image Preview'
 
 class CardAdmin(admin.ModelAdmin):
-    list_display = ('card_thumbnail', 'is_premium')
+    list_display = ('card_thumbnail','name', 'is_premium')
     search_fields = ('is_premium',)
 
     def card_thumbnail(self, obj):
