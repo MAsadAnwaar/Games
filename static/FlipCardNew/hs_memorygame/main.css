@@ -186,6 +186,7 @@ figure {
     border-radius: 10px;
     border: 2px solid #ddd;
     transition: transform 0.3s; /* Smooth transition on hover */
+    padding-bottom: 20px; /* Adds space at the bottom */
 }
 /* Modal styles */
 .modal {
