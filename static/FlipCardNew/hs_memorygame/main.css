@@ -1,3 +1,10 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: HS Font;
     src: url('font/OPTIBelwe-Medium.otf');
@@ -6,39 +13,55 @@
 body {
     margin: 0;
     background-image: url(img/pagebg.jpg);
-    background-size: cover; /* Ensures the background image covers the entire viewport */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents background image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: "HS Font", sans-serif;
-    overflow: hidden; /* Prevent scrollbars due to scaling */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    min-width: 100vw;  /* Ensure the body takes full viewport width */
+    box-sizing: border-box;
 }
 
+/* Container to center content */
+#main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Scale wrapper adjustments for bottom alignment */
 #scale-wrapper {
-    transform: scale(0.58); /* Scales the content to 60% */
-    transform-origin: top left; /* Ensures scaling starts from the top-left corner */
-    width: 166.67%; /* Adjusted width to account for scaling: 100% / 0.60 */
-    height: 166.67%; /* Adjusted height to account for scaling: 100% / 0.60 */
-    margin: 10px 10px 20px 10px; /* 10px margin on top, left, and right sides; no margin on bottom */
-    position: relative; /* Ensures the wrapper can be positioned properly */
+    transform: scale(0.58);
+    transform-origin: bottom center; /* Scale from bottom center */
+    width: 166.67%;
+    height: 166.67%;
+    position: absolute;
+    min-width: 640px;
+    min-height: 1110px;
+    bottom: 0; /* Zero distance from the bottom */
 }
 
 #level-display {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 5px 10px;
-    font-size: 24px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 20px;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
     border-radius: 5px;
-    font-size: 20px;
 }
+
 #principal {
     position: relative;
-    top: 20px;
-    height: 1110px; /* Adjusted height for the 4x8 grid */
-    width: 640px; /* Adjusted width for the 4x8 grid */
+    height: 1110px;
+    width: 640px;
     margin: auto;
     padding: 5px;
     text-align: center;
@@ -49,10 +72,11 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
 #grid-container {
     position: absolute;
-    top: 0; /* Adjust based on where you want it positioned */
-    left: 0; /* Adjust based on where you want it positioned */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -62,23 +86,22 @@ body {
     padding: 0;
     margin: 0;
     align-content: center;
-    gap: 0%; /* Adjust the gap between grid items */
+    gap: 0%;
 }
-
 
 #container0, #container1, #container2, #container3, #container4, #container5, #container6, #container7,
 #container8, #container9, #container10, #container11, #container12, #container13, #container14, #container15,
 #container16, #container17, #container18, #container19, #container20, #container21, #container22, #container23,
 #container24, #container25, #container26, #container27, #container28, #container29, #container30, #container31 {
     border-radius: 35px;
-    width: 140px; /* Adjusted width for 4 columns */
-    height: 120px; /* Adjusted height for 8 rows */
+    width: 140px;
+    height: 120px;
     float: left;
-    margin: 0px;
+    margin: 0;
     cursor: pointer;
     perspective: 600px;
     transition: 0.5s;
-    overflow: hidden; /* Ensures that images do not overflow out of the container */
+    overflow: hidden;
 }
 
 #carta0, #carta1, #carta2, #carta3, #carta4, #carta5, #carta6, #carta7,
@@ -98,29 +121,28 @@ figure {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    backface-visibility: hidden;    
-    border: 5px solid white; /* Add this line for a white border */
-    box-sizing: border-box; /* Ensure border is included in the width and height */
+    backface-visibility: hidden;
+    border: 5px solid white;
+    box-sizing: border-box;
 }
 
 #frente {
     background-image: url(img/bg.png);
-    background-size: cover; /* Ensure the image fits within the element */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #fff;
-    border-radius: 35px; /* Rounded corners */
-    transition: background-image 0.4s; /* Smooth transition for background changes */
-    width: 97%; /* Ensure full width */
-    height: 97%; /* Ensure full height */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    border-radius: 35px;
+    transition: background-image 0.4s;
+    width: 97%;
+    height: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #frente:hover {
     background-image: url(img/bghover.png);
-    background-size: cover; /* Ensure the hover image covers the entire element */
 }
 
 #costa0, #costa1, #costa2, #costa3, #costa4, #costa5, #costa6, #costa7,
@@ -128,9 +150,9 @@ figure {
 #costa16, #costa17, #costa18, #costa19, #costa20, #costa21, #costa22, #costa23,
 #costa24, #costa25, #costa26, #costa27, #costa28, #costa29, #costa30, #costa31 {
     background-image: url(img/1.jpg);
-    background-size: cover; /* Ensures the background image fits within the card */
+    background-size: cover;
     background-position: center;
-    background-color: #fff; /* Optional: Add a background color to fill any space around the image */
+    background-color: #fff;
     border-radius: 35px;
     border: 2px solid black;
     transform: rotateY(180deg);
@@ -145,50 +167,50 @@ figure {
 }
 
 #botao {
-    display: block; /* Ensure button is displayed */
-    margin: 20px auto; /* Center the button horizontally and add margin above and below */
-    padding: 10px 20px; /* Add padding inside the button */
-    font-size: 20px; /* Increase font size for better readability */
-    border: 2px solid #333; /* Add a border for better visibility */
-    background-color: #f4f4f4; /* Light background color */
-    border-radius: 5px; /* Rounded corners for a more modern look */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid #333;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #botao:hover {
-    background-color: #ddd; /* Slightly darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: #ddd;
+    transform: scale(1.05);
 }
 
 #informacoes {
     position: relative;
-    top: 20px;
     text-align: center;
-    width: 650px; /* Adjusted width to match the #principal div */
+    width: 650px;
     height: auto;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.6);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
 .blurred {
     filter: blur(8px);
-    pointer-events: none; /* Prevent clicking on the blurred image */
+    pointer-events: none;
 }
 
 .unlocked-image {
-    cursor: pointer; /* Make the images appear clickable */
+    cursor: pointer;
     width: 100px;
     text-align: center;
     height: 75px;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #ddd;
-    transition: transform 0.3s; /* Smooth transition on hover */
-    padding-bottom: 20px; /* Adds space at the bottom */
+    transition: transform 0.3s;
+    padding-bottom: 20px;
 }
-/* Modal styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -227,9 +249,8 @@ figure {
 }
 
 .unlocked-image:hover:not(.blurred) {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.05);
 }
-
 
 #unlocked-images h2 {
     font-size: 24px;
@@ -246,10 +267,9 @@ figure {
 }
 
 .unlocked-image {
-    width: 100px; /* Adjust size as needed */
-    height: 75px; /* Adjust size as needed */
-    object-fit: cover; /* Ensure images fit nicely */
-    border-radius: 10px; /* Optional: Rounded corners */
-    border: 2px solid #ddd; /* Optional: Border to separate images */
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
 }
-
