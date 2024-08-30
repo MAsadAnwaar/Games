@@ -1,0 +1,214 @@
+/*------Footer Section Start--------*/
+/*------Footer Section Start--------*/
+.footer__section{
+	position: relative;
+	overflow: hidden;
+}
+.footer__top {
+	position: relative;
+	z-index: 1;
+	.widget__items {
+		.footer-head {
+			margin-bottom: 16px;
+			a{
+				width: 150px;
+				display: block;		
+				img{
+					@include imgw;
+				}	
+			}
+			.title {
+				color: var(--white-color);
+				margin-top: -6px;
+				font-weight: 500;
+			}
+		}
+		p{
+			color: var(--white-color);
+			font-size: 18px;
+			font-weight: 400;
+		}
+		.content-area {
+			p{
+				color: var(--white-color);
+				margin-top: -5px;
+				font-size: 18px;
+				font-weight: 400;
+			}
+			.quick-link {
+				li {
+					display: flex;
+					align-items: center;
+					transition: all 0.5s;
+					margin-left: -20px;
+					&:not(:last-child) {
+						margin-bottom: 5px;
+					}
+					a {
+						@include flex;
+						font-size: 18px;
+						color: var(--white-color);
+						transition: all 0.5s;
+						margin-left: 24px;
+						font-weight: 400;
+						img{
+							margin-right: -28px;
+							opacity: 0;
+							transition: all 0.3s;
+						}
+					}
+					&:hover{
+						a{
+							color: var(--theme-color);
+							img{
+								opacity: 1;
+								margin-right: 5px;
+							}
+						}
+					}
+				}
+			}
+			.contact{
+				li{
+					&:not(:last-child){
+						margin-bottom: 7px;
+					}
+					gap: 8px;
+					@include flex;
+					.phone-icon{
+						i{
+							color: var(--ratting-color);
+						}
+					}
+					.email-part{
+						font-size: 16px;
+						transition: all 0.3s;
+						color: var(--white-color);
+						font-weight: 400;
+					}
+					&:hover{
+						a{
+							color: var(--white-color);
+						}
+					}
+				}
+			}
+			form{
+				position: relative;
+				margin-top: 25px;
+				input{
+					transform: skewX(-19deg);
+					border: 1px solid #31A813;
+					padding: 15px 138px 15px 20px;
+					outline: none;
+					box-shadow: none;
+					width: 100%;
+					color: var(--white-color);
+					position: relative;
+					background-color: transparent;
+					margin-bottom: 30px;
+				}
+				::placeholder{
+					color: var(--white-color);
+				}
+				.cmn--btn{
+					position: absolute;
+					top: 6px;
+					right: 5px;
+					border: none;
+					padding: 11px 18px 14px;
+				}
+			}
+			.social{
+				@include flex;
+				justify-content: flex-start;
+				margin-top: 10px;
+				li{
+					&:not(:last-child){
+						margin-right: 10px;
+					}
+					.icon{
+						@include radius;
+						display: block;
+						width: 40px;
+						height: 40px;
+						line-height: 38px;
+						border-radius: 50%;
+						border: 1px solid var(--button-color);
+						i{
+							color: var(--button-color);
+							font-size: 18px;
+						}
+						&:hover{
+							background-color: var(--button-color);
+							border-color: var(--button-color);
+						}
+					}
+				}
+			}
+			.social__area{
+				.social{
+					@include flex;
+					justify-content: flex-start;
+					li{
+						&:not(:last-child){
+							margin-right: 10px;
+						}
+						.icon{
+							@include radius;
+							display: block;
+							width: 40px;
+							height: 40px;
+							line-height: 38px;
+							border-radius: 50%;
+							border: 1px solid var(--theme-color);
+							i{
+								color: var(--theme-color);
+								font-size: 18px;
+							}
+							&:hover{
+								background-color: var(--slide-btn);
+								border-color: var(--slide-btn);
+							}
+						}
+					}
+				}
+			}
+			.badge__icon{
+				margin-top: 30px;
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+			}
+		}
+	}
+}
+.footer__bottom {
+	border-top: 1px solid #2D5323;
+	padding: 29px 0;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	p{
+		font-size: 18px;
+		color: var(--white-color);
+		a{
+			color: #319F12;
+		}
+	}
+	.bottom__ling{
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		li{
+			a{
+				color: var(--white-color);
+				font-size: 18px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+/*------Footer Section End--------*/
+/*------Footer Section End--------*/
