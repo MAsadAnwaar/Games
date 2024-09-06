@@ -17,7 +17,7 @@ class CardAdmin(admin.ModelAdmin):
 
 @admin.register(BackgroundImage)
 class BackgroundImageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'image_preview')  # Updated to use image_preview method
+    list_display = ('id','name', 'image_preview')  # Updated to use image_preview method
     search_fields = ('name',)  # Fields to search within
     list_filter = ('name',)  # Fields to filter by
 

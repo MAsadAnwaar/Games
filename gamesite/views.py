@@ -124,12 +124,13 @@ def Flip_and_Find(request):
 
 # views.pyfrom django.shortcuts import render
 from django.shortcuts import render
-from .models import Card, BackgroundImage
+from .models import Card
+from filpcardgameapi.models import Image
 import random
 from django.http import JsonResponse
 def hs_memorygame(request):
     cards = list(Card.objects.all())
-    backgrounds = list(BackgroundImage.objects.all())
+    backgrounds = list(Image.objects.all())
 
     if len(cards) < 16:
         raise ValueError("Not enough images in the database")
@@ -147,9 +148,9 @@ def hs_memorygame(request):
     random.shuffle(selected_cards)
 
     card_data = [{'id': i, 'image_url': card.image_url()} for i, card in enumerate(selected_cards)]
-    background_image = backgrounds[level - 1].image.url
+    background_image = backgrounds[level - 1].image_url.url
 
-    unlocked_background_images = [bg.image.url for bg in backgrounds[:level]]
+    unlocked_background_images = [bg.image_url.url for bg in backgrounds[:level]]
 
     # Pass the total number of containers (cards) to the template
     total_containers = 16  # Adjust if necessary based on your game logic
