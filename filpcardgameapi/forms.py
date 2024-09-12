@@ -7,3 +7,8 @@ class CardUploadForm(forms.ModelForm):
     class Meta:
         model = Card
         fields = ['category', 'images']
+
+from django import forms
+
+class URLForm(forms.Form):
+    urls = forms.CharField(widget=forms.Textarea, help_text="Enter image URLs, each on a new line.")

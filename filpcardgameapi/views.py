@@ -59,3 +59,44 @@ def upload_cards(request):
         form = CardUploadForm()
     
     return render(request, 'upload_cards.html', {'form': form})
+
+    
+import requests
+from django.shortcuts import render, redirect
+from django.core.files.base import ContentFile
+from django.contrib import messages
+from .models import Image
+from .forms import URLForm
+
+def download_images_from_urls(urls):
+    messages_list = []
+    for index, url in enumerate(urls, start=1):
+        try:
+            response = requests.get(url.strip())
+            response.raise_for_status()
+
+            image_name = str(index)
+            image_content = ContentFile(response.content, f'{image_name}.jpg')
+
+            image_instance = Image(name=image_name, image_url=image_content)
+            image_instance.save()
+            messages_list.append(f'Successfully downloaded image from {url}.')
+        except requests.RequestException as e:
+            messages_list.append(f'Failed to download image from {url}. Error: {e}')
+        except Exception as e:
+            messages_list.append(f'Failed to save image {image_name}. Error: {e}')
+    return messages_list
+
+def image_upload_view(request):
+    if request.method == 'POST':
+        form = URLForm(request.POST)
+        if form.is_valid():
+            urls = form.cleaned_data['urls'].split('\n')
+            messages_list = download_images_from_urls(urls)
+            for message in messages_list:
+                messages.info(request, message)  # Use messages.info for non-error/success messages
+            return redirect('image_upload')  # Redirect after POST
+    else:
+        form = URLForm()
+    return render(request, 'image_upload.html', {'form': form})
+

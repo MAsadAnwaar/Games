@@ -14,7 +14,7 @@ function inicializar() {
     nivel = parseInt(document.querySelector('meta[name="nivel"]').getAttribute('content')); // Get the current level from meta tag
 
     // Calculate the grid size based on the level
-    const gridSizes = [12, 16, 20, 24, 28, 32]; // Represents 4x3, 4x4, 4x5, 4x6, 4x7, 4x8
+    const gridSizes = [12, 16, 20, 24, 28]; // Represents 4x3, 4x4, 4x5, 4x6, 4x7, 4x8
     let numCards = gridSizes[Math.min(Math.floor((nivel - 1) / 2), gridSizes.length - 1)]; // Determine the grid size
 
     caixasViradas = [];
