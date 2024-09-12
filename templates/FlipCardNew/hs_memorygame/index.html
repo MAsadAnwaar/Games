@@ -19,31 +19,31 @@
             </div>
         </div>
         
-        <!-- Existing content above remains the same -->
-
         <div id="informacoes">
             <span id="span-points">Points: 0</span>
-            <input type="button" id="botao" value="Next Level" onclick="inicializar()" style="display: none;">
-            <h2>Unlocked Level Images</h2>
-            <div id="unlocked-images-container">
-                {% for image in unlocked_background_images %}
-                <img src="{{ image }}" alt="Unlocked Level" class="unlocked-image {% if forloop.counter == level %}blurred{% endif %}" onclick="openImage(this)">
-                {% endfor %}
+            <input type="button" id="botao" value="Unlock Next Image" onclick="inicializar()" style="display: none;">
+            <br>
+            <button id="show-images-button" onclick="openModal()">See Unlocked Images</button>
+        </div>
+
+        <!-- Modal for displaying unlocked images -->
+        <div id="images-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2>Unlocked Level Images</h2>
+                <div id="unlocked-images-container">
+                    {% for image in unlocked_background_images %}
+                    <img src="{{ image }}" alt="Unlocked Level" class="unlocked-image" onclick="openImage(this)">
+                    {% endfor %}
+                </div>
             </div>
         </div>
 
-        <!-- New section for unlocked images -->
-        <div id="unlocked-images">
-            
-        </div>
-
-        
         <!-- Modal for displaying the full image -->
         <div id="image-modal" class="modal" onclick="closeImage()">
             <span class="close">&times;</span>
             <img class="modal-content" id="full-image">
         </div>
-        
     </div>
 
     <script>
@@ -65,16 +65,41 @@
     </script>
     <script>
         window.addEventListener('load', function() {
-          const loader = document.getElementById('loader');
-          if (loader) {
-            loader.classList.add('hidden'); // Add the 'hidden' class to start fading out
-            setTimeout(function() {
-              loader.style.display = 'none'; // Hide the loader element completely after fading out
-            }, 500); // Match this duration with the transition time in CSS
-          }
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.classList.add('hidden'); // Add the 'hidden' class to start fading out
+                setTimeout(function() {
+                    loader.style.display = 'none'; // Hide the loader element completely after fading out
+                }, 500); // Match this duration with the transition time in CSS
+            }
         });
-      </script>
-      
-    
+
+        function openModal() {
+            document.getElementById('images-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('images-modal').style.display = 'none';
+        }
+
+        function openImage(element) {
+            const modal = document.getElementById('image-modal');
+            const fullImage = document.getElementById('full-image');
+            fullImage.src = element.src;
+            modal.style.display = "block";
+        }
+
+        function closeImage() {
+            const modal = document.getElementById('image-modal');
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('images-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
